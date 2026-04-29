@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brand Architect | Legacy x AI Execution</title>
-    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@800;900&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@800;900&family=Inter:wght@400;700;800;900&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg: #000000;
             --accent: #CCFF00; /* 네온 라임 */
             --text-main: #FFFFFF;
             --text-dim: #999999;
-            --tag-bg: #CCFF00; /* 태그 배경색 */
-            --tag-text: #000000; /* 태그 글자색 */
+            --tag-bg: #CCFF00;
+            --tag-text: #000000;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -23,9 +23,10 @@
             line-height: 1.6;
             word-break: keep-all;
             background-image: 
-                linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+                linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
             background-size: 50px 100%;
             background-attachment: fixed;
+            overflow-x: hidden;
         }
 
         /* NAVIGATION */
@@ -35,11 +36,11 @@
             justify-content: space-between;
             align-items: center;
             position: fixed; width: 100%; top: 0; z-index: 100;
-            background: rgba(0,0,0,0.8); backdrop-filter: blur(10px);
+            background: rgba(0,0,0,0.8); backdrop-filter: blur(15px);
             border-bottom: 1px solid rgba(255,255,255,0.05);
         }
-        .logo { font-family: 'Urbanist', sans-serif; font-weight: 900; color: var(--accent); font-size: 1.2rem; text-transform: uppercase; }
-        .nav-links a { color: var(--text-main); text-decoration: none; margin-left: 30px; font-size: 0.9rem; font-weight: 700; transition: 0.3s; }
+        .logo { font-family: 'Urbanist', sans-serif; font-weight: 900; color: var(--accent); font-size: 1.2rem; text-transform: uppercase; letter-spacing: -1px; }
+        .nav-links a { color: var(--text-main); text-decoration: none; margin-left: 30px; font-size: 0.8rem; font-weight: 700; transition: 0.3s; letter-spacing: 1px; }
         .nav-links a:hover { color: var(--accent); }
 
         /* HERO SECTION */
@@ -51,7 +52,24 @@
             align-items: center;
             text-align: center;
             padding: 0 10%;
-            margin-top: 50px;
+            position: relative;
+        }
+
+        /* Giant Background Text */
+        .hero-bg-text {
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Inter', sans-serif;
+            font-weight: 900;
+            font-size: 25vw;
+            color: #CCFF00;
+            opacity: 0.03;
+            white-space: nowrap;
+            pointer-events: none;
+            z-index: 0;
+            line-height: 1;
         }
         
         .badge {
@@ -64,7 +82,9 @@
             margin-bottom: 30px;
             border: 1px solid rgba(204, 255, 0, 0.3);
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
+            position: relative;
+            z-index: 1;
         }
 
         .hero h1 {
@@ -74,7 +94,8 @@
             line-height: 1.1;
             letter-spacing: -2px;
             margin-bottom: 35px;
-            text-shadow: 0 0 20px rgba(204, 255, 0, 0.2);
+            position: relative;
+            z-index: 1;
         }
         .hero h1 span { color: var(--accent); }
 
@@ -84,36 +105,52 @@
             max-width: 850px;
             margin-bottom: 70px;
             word-break: keep-all;
+            position: relative;
+            z-index: 1;
         }
 
-        /* FLOATING TAGS */
+        /* TAGS SECTION */
         .tag-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 20px;
             max-width: 1000px;
+            position: relative;
+            z-index: 2;
         }
         
         .tag {
-            background-color: var(--tag-bg);
-            color: var(--tag-text);
             padding: 15px 30px;
             border-radius: 50px;
             font-size: 0.95rem;
             font-weight: 800;
             transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            box-shadow: 10px 10px 20px rgba(0,0,0,0.3);
             cursor: default;
-            display: inline-block;
+            white-space: nowrap;
         }
 
+        .tag.filled {
+            background-color: var(--accent);
+            color: #000;
+            box-shadow: 10px 10px 20px rgba(0,0,0,0.3);
+        }
+
+        .tag.outline {
+            border: 2px solid var(--accent);
+            color: var(--accent);
+            background: rgba(0,0,0,0.5);
+        }
+
+        /* Random Rotation for Tags */
         .tag:nth-child(1) { transform: rotate(-5deg); }
         .tag:nth-child(2) { transform: rotate(3deg); }
         .tag:nth-child(3) { transform: rotate(-2deg); }
         .tag:nth-child(4) { transform: rotate(4deg); }
         .tag:nth-child(5) { transform: rotate(-3deg); }
-        .tag:nth-child(6) { transform: rotate(2deg); }
+        .tag:nth-child(6) { transform: rotate(5deg); }
+        .tag:nth-child(7) { transform: rotate(-4deg); }
+        .tag:nth-child(8) { transform: rotate(2deg); }
 
         .tag:hover {
             transform: rotate(0deg) scale(1.1) !important;
@@ -121,9 +158,90 @@
             z-index: 10;
         }
 
+        /* PROJECTS SECTION */
+        .projects { padding: 150px 10%; background-color: #050505; }
+        .projects h2 { 
+            font-family: 'Inter', sans-serif; 
+            font-size: 3rem; 
+            font-weight: 900; 
+            text-align: center; 
+            margin-bottom: 80px; 
+            letter-spacing: -2px;
+            text-transform: uppercase;
+        }
+        .projects h2 span { color: var(--accent); }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .p-card {
+            background: #0A0A0A;
+            border: 1px solid #1A1A1A;
+            padding: 60px 50px;
+            border-radius: 40px;
+            transition: 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .p-card:hover { 
+            border-color: rgba(204, 255, 0, 0.3); 
+            transform: translateY(-10px); 
+            background: #111111;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+        }
+        
+        .p-category { 
+            font-size: 0.7rem; 
+            font-weight: 900; 
+            color: var(--accent); 
+            text-transform: uppercase; 
+            letter-spacing: 3px; 
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .p-card h3 { font-size: 2rem; font-weight: 800; margin-bottom: 25px; color: #fff; line-height: 1.2; }
+        .p-card p { color: #777; font-size: 1rem; margin-bottom: 40px; line-height: 1.8; }
+        
+        .p-tags { display: flex; flex-wrap: wrap; gap: 10px; }
+        .p-tags span { 
+            font-size: 0.7rem; 
+            color: var(--accent); 
+            border: 1px solid rgba(204, 255, 0, 0.4); 
+            padding: 6px 16px; 
+            border-radius: 50px; 
+            font-weight: 700; 
+            font-family: monospace;
+        }
+
+        /* CONTACT SECTION */
+        .contact { text-align: center; padding: 200px 10%; background: #000; }
+        .contact p { color: #555; font-size: 1rem; font-weight: 700; margin-bottom: 30px; letter-spacing: 1px; }
+        .contact a {
+            font-family: 'Inter', sans-serif;
+            font-size: clamp(3rem, 10vw, 8rem);
+            font-weight: 900;
+            color: var(--text-main);
+            text-decoration: none;
+            transition: 0.4s;
+            letter-spacing: -4px;
+            display: inline-block;
+        }
+        .contact a:hover { 
+            color: var(--accent); 
+            transform: translateX(20px);
+            text-shadow: 0 0 50px rgba(204, 255, 0, 0.3);
+        }
+
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
-            .tag { padding: 10px 20px; font-size: 0.8rem; }
+            .hero h1 { font-size: 2.5rem; letter-spacing: -1px; }
+            .hero-bg-text { font-size: 40vw; top: 60%; }
+            .project-grid { grid-template-columns: 1fr; }
+            .p-card { padding: 40px 30px; }
+            .contact a { font-size: 3rem; letter-spacing: -1px; }
         }
     </style>
 </head>
@@ -138,23 +256,66 @@
         </div>
     </nav>
 
-    <section class="hero">
-        <div class="badge">Legacy x AI Execution</div>
-        <h1>20년의 브랜드 설계,<br><span>AI로 완성하는 실행의 속도.</span></h1>
-        <p>
-            웹디자인, 브랜딩, 통합 기획의 깊은 내공을 바탕으로<br>
-            AI 도구를 활용해 비즈니스의 스케일업을 설계하는 브랜드 아키텍트입니다.
-        </p>
-        
-        <div class="tag-container">
-            <div class="tag">Gemini & AI Automation</div>
-            <div class="tag">Vibe Coding (Cursor)</div>
-            <div class="tag">Brand Strategy</div>
-            <div class="tag">Integrated Marketing</div>
-            <div class="tag">Web & Visual Design</div>
-            <div class="tag">Total Brand Management</div>
-        </div>
-    </section>
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <div class="hero-bg-text">BUILDER</div>
+            <div class="badge">Legacy x AI Execution</div>
+            <h1>20년의 브랜드 설계,<br><span>AI로 완성하는 실행의 속도.</span></h1>
+            <p>
+                웹디자인, 브랜딩, 통합 기획의 깊은 내공을 바탕으로<br>
+                AI 도구를 활용해 비즈니스의 스케일업을 설계하는 브랜드 아키텍트입니다.
+            </p>
+            
+            <div class="tag-container">
+                <div class="tag outline">Gemini & AI Studio</div>
+                <div class="tag outline">Vibe Coding (Cursor)</div>
+                <div class="tag filled">Brand Strategy</div>
+                <div class="tag outline">Automation</div>
+                <div class="tag filled">200% GROWTH</div>
+                <div class="tag filled">Scale-up Expert</div>
+                <div class="tag outline">Performance Marketing</div>
+                <div class="tag outline">Healthcare Branding</div>
+            </div>
+        </section>
+
+        <!-- PROJECTS SECTION -->
+        <section id="projects" class="projects">
+            <h2>FEATURED <span>PROJECTS</span></h2>
+            <div class="project-grid">
+                <div class="p-card">
+                    <span class="p-category">Scale-up</span>
+                    <h3>신생 브랜드 매출 2배 성장</h3>
+                    <p>브랜드 아이덴티티 재정립 및 마케팅 자동화 시스템 구축을 통한 성과 달성.</p>
+                    <div class="p-tags">
+                        <span>#Marketing</span>
+                        <span>#Branding</span>
+                        <span>#Strategy</span>
+                    </div>
+                </div>
+                <div class="p-card">
+                    <span class="p-category">Healthcare</span>
+                    <h3>의료기기 브랜드 구축</h3>
+                    <p>고압산소챔버 브랜드 설계 및 웹사이트 제작, 온오프라인 브랜딩 통합 관리.</p>
+                    <div class="p-tags">
+                        <span>#Product_Design</span>
+                        <span>#Web</span>
+                        <span>#Healthcare</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="contact">
+            <p>함께 브랜드의 미래를 고민하고 싶다면</p>
+            <a href="mailto:hello@brandarchitect.ai">Contact Me &rarr;</a>
+        </section>
+    </main>
+
+    <footer style="padding: 50px 10%; border-top: 1px solid #111; font-size: 0.7rem; color: #333; text-align: center; font-weight: 700; letter-spacing: 2px;">
+        &copy; 2026 BRAND ARCHITECT. ALL RIGHTS RESERVED.
+    </footer>
 
 </body>
 </html>
