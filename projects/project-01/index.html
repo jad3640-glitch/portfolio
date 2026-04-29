@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integrated Brand Launch | BRAND ARCHITECT</title>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@800;900&family=Inter:wght@400;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #000000;
+            --accent: #CCFF00;
+            --text-main: #FFFFFF;
+            --text-dim: #999999;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { 
+            background-color: var(--bg); 
+            color: var(--text-main); 
+            font-family: 'Inter', sans-serif; 
+            line-height: 1.7;
+            overflow-x: hidden;
+            letter-spacing: -0.01em; /* 단단하고 전문적인 느낌을 위한 자간 조정 */
+        }
+
+        /* Nav */
+        nav { 
+            padding: 30px 10%; 
+            background: rgba(0,0,0,0.8); 
+            backdrop-filter: blur(10px); 
+            position: sticky; 
+            top: 0; 
+            z-index: 100; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .logo { font-family: 'Urbanist', sans-serif; font-weight: 900; color: var(--accent); text-decoration: none; font-size: 1.2rem; }
+
+        /* Hero */
+        .project-hero { padding: 120px 10% 60px; }
+        .category { color: var(--accent); font-weight: 800; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px; display: block; font-size: 0.9rem;}
+        .project-hero h1 { 
+            font-size: clamp(2.5rem, 5vw, 4rem); 
+            font-weight: 900; 
+            line-height: 1.1; 
+            margin-bottom: 30px; 
+            letter-spacing: -0.05em; 
+        }
+        .project-hero p { 
+            color: var(--text-dim); 
+            font-size: 1.2rem; 
+            max-width: 800px; 
+            font-weight: 400;
+        }
+
+        /* Case Study Layout */
+        .content-container { padding: 0 10% 120px; }
+        
+        .main-mockup { margin-bottom: 120px; text-align: center; }
+        .main-mockup img { 
+            width: 100%; 
+            border-radius: 20px; 
+            border: 1px solid #222; 
+            box-shadow: 0 40px 100px rgba(204, 255, 0, 0.05); 
+            transition: transform 0.5s ease;
+        }
+        .main-mockup img:hover { transform: scale(1.01); }
+
+        .section-grid { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 100px; 
+            margin-bottom: 150px; 
+            align-items: center; 
+        }
+        .section-text h2 { 
+            font-size: 2.2rem; 
+            font-weight: 800;
+            margin-bottom: 25px; 
+            letter-spacing: -0.03em; 
+            color: var(--accent); 
+            line-height: 1.2;
+        }
+        .section-text p { 
+            color: var(--text-dim); 
+            font-size: 1.1rem; 
+            margin-bottom: 20px; 
+            word-break: keep-all;
+        }
+        .section-img img { 
+            width: 100%; 
+            border-radius: 15px; 
+            border: 1px solid #333; 
+            background: #0a0a0a;
+        }
+
+        .ai-tag { 
+            display: inline-block; 
+            padding: 6px 15px; 
+            background: rgba(204, 255, 0, 0.1); 
+            color: var(--accent); 
+            border-radius: 5px; 
+            font-size: 0.85rem; 
+            font-weight: 700; 
+            margin-bottom: 15px; 
+        }
+
+        /* Footer */
+        .back-nav { text-align: center; padding: 100px 0; border-top: 1px solid #111; }
+        .btn-back { 
+            color: var(--text-main); 
+            text-decoration: none; 
+            font-weight: 700; 
+            border: 1px solid #333; 
+            padding: 18px 45px; 
+            border-radius: 50px; 
+            transition: 0.3s; 
+            display: inline-block;
+        }
+        .btn-back:hover { 
+            border-color: var(--accent); 
+            color: var(--accent); 
+            background: rgba(204, 255, 0, 0.05); 
+        }
+
+        /* Responsive Optimization */
+        @media (max-width: 900px) {
+            .section-grid { 
+                grid-template-columns: 1fr; 
+                gap: 60px; 
+                margin-bottom: 100px;
+            }
+            .section-grid[style*="rtl"] {
+                display: flex;
+                flex-direction: column-reverse;
+            }
+            .project-hero { padding: 80px 5% 40px; }
+            .content-container { padding: 0 5% 80px; }
+            .project-hero h1 { font-size: 2.2rem; }
+            .section-text h2 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="../../index.html" class="logo">BRAND ARCHITECT.</a>
+    </nav>
+
+    <header class="project-hero">
+        <span class="category">Total Brand Launch Case Study</span>
+        <h1>20년의 본질을 설계하고,<br>AI로 실행을 완성하다.</h1>
+        <p>전통적인 브랜딩의 깊이에 AI 도구의 효율을 더해 비즈니스의 새로운 방향을 제시한 통합 브랜딩 프로젝트입니다.</p>
+    </header>
+
+    <main class="content-container">
+        <section class="main-mockup">
+            <img src="../images/main_mockup.png" alt="Brand Architect Portfolio Mockup" onerror="this.src='../images/project-main.png'">
+        </section>
+
+        <section class="section-grid">
+            <div class="section-text">
+                <span class="ai-tag">AI Powered Strategy</span>
+                <h2>Integrated Web & E-commerce</h2>
+                <p>쇼핑몰 기획부터 배너 운영까지, 브랜드 아이덴티티가 모든 터치포인트에서 일관되게 전달되도록 설계했습니다.</p>
+                <p>Vibe Coding(Cursor)을 활용해 예약 관리 시스템 및 광고 데이터 분석 자동화 파이프라인을 구축하여 운영 효율을 극대화했습니다.</p>
+            </div>
+            <div class="section-img">
+                <img src="../images/web_mockup.png" alt="Web Identity Mockup" onerror="this.src='../images/project-main.png'">
+            </div>
+        </section>
+
+        <section class="section-grid" style="direction: rtl;">
+            <div class="section-text" style="direction: ltr;">
+                <span class="ai-tag">Content Automation</span>
+                <h2>SNS Content Design</h2>
+                <p>다양한 연령층을 타겟으로 하는 교육 콘텐츠 및 브랜드 SNS 채널을 통합 관리했습니다.</p>
+                <p>Gemini AI를 활용해 각 채널별 최적화된 카피라이팅과 디자인 소스를 생성하여, 고품질의 콘텐츠를 초속으로 제작/배포했습니다.</p>
+            </div>
+            <div class="section-img">
+                <img src="../images/sns_mockup.png" alt="SNS Content Mockup" onerror="this.src='../images/project-main.png'">
+            </div>
+        </section>
+    </main>
+
+    <footer class="back-nav">
+        <a href="../../index.html" class="btn-back">← 메인 페이지로 돌아가기</a>
+    </footer>
+
+</body>
+</html>
