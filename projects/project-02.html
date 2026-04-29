@@ -129,8 +129,9 @@ project.optimizeWorkflow(['reporting', 'scheduling', 'crm']);
 
             <div class="relative">
                 <div class="glass-card p-2 relative overflow-hidden group">
-                    <div class="aspect-video bg-gradient-to-br from-gray-900 to-black rounded-2xl border border-white/10 flex flex-col items-center justify-center p-6 text-center relative overflow-hidden">
-                        <!-- Dashboard UI Feel -->
+                    <div class="aspect-video bg-gradient-to-br from-gray-900 to-black rounded-2xl border border-white/10 flex flex-col items-center justify-center relative overflow-hidden">
+                        <img src="images/project-main.png" alt="Automation Dashboard" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity">
+                        <!-- Dashboard UI Overlay -->
                         <div class="absolute top-4 left-4 right-4 flex justify-between items-center opacity-40">
                             <div class="flex space-x-1">
                                 <div class="w-12 h-1 bg-neon/30 rounded"></div>
@@ -139,14 +140,9 @@ project.optimizeWorkflow(['reporting', 'scheduling', 'crm']);
                             <div class="w-2 h-2 rounded-full bg-neon animate-pulse"></div>
                         </div>
                         
-                        <div class="text-neon text-5xl font-black italic mb-2 tracking-tighter">AI x ACTION</div>
-                        <p class="text-xs text-gray-500 font-mono tracking-widest">SYSTEM STATUS: OPTIMIZED</p>
-                        
-                        <div class="mt-8 flex space-x-4 opacity-50">
-                            <div class="h-8 w-1 bg-neon"></div>
-                            <div class="h-12 w-1 bg-neon"></div>
-                            <div class="h-6 w-1 bg-neon"></div>
-                            <div class="h-10 w-1 bg-neon"></div>
+                        <div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+                            <div class="text-neon text-5xl font-black italic mb-2 tracking-tighter drop-shadow-lg">AI x ACTION</div>
+                            <p class="text-xs text-gray-300 font-mono tracking-widest drop-shadow">SYSTEM STATUS: OPTIMIZED</p>
                         </div>
                     </div>
                 </div>
