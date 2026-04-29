@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
@@ -67,9 +67,9 @@
         }
     </style>
 </head>
-<body class="font-sans antialiased overflow-x-hidden">
+<body class="font-sans antialiased overflow-x-hidden tracking-tighter">
 
-    <div class="bg-text-giant">20Y INSIGHT. AISPEED.</div>
+    <div class="bg-text-giant uppercase">20Y Insight. Execution.</div>
 
     <!-- Navigation -->
     <nav class="fixed top-0 left-0 right-0 z-50 bg-glass border-b border-white/5">
@@ -88,72 +88,102 @@
 
     <main class="pt-32 pb-20 px-6 relative z-10">
         <!-- Hero Section -->
-        <section class="max-w-7xl mx-auto mb-40 mt-10">
-            <span class="text-neon font-black uppercase tracking-[0.3em] text-xs mb-6 block">The Definition of Practitioner</span>
+        <section class="max-w-7xl mx-auto mb-32 mt-10">
+            <span class="text-neon font-black uppercase tracking-[0.3em] text-[10px] mb-6 block">The Definition of Practitioner</span>
             <h1 class="font-title font-black text-6xl md:text-[8rem] leading-[0.9] tracking-tighter mb-16">
                 <span class="tracking-[0.15em]">본질은</span> <span class="text-neon text-glow">20년</span>,<br/> 
                 실행은 <span class="text-neon text-glow italic">AI.</span>
             </h1>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
-                <p class="text-xl md:text-3xl text-gray-300 leading-snug font-medium">
+                <p class="text-xl md:text-3xl text-gray-300 leading-snug font-medium tracking-tighter">
                     1인 총괄 브랜드 기획자의 정의.<br/>
                     <span class="text-white">20년의 현장 경험에서 우러나온 브랜드 통찰을 '정밀한 프롬프트'로 변환합니다.</span> 
                 </p>
-                <p class="text-gray-500 text-lg leading-relaxed">
+                <p class="text-gray-500 text-lg leading-relaxed tracking-tight">
                     노련한 기획자가 AI라는 도구를 완벽히 지배할 때 비즈니스의 물리적 시간은 단축됩니다. 
                     단순한 기술 도입이 아닌, 브랜드의 영혼을 이해하는 기획자의 안목에 AI의 무한한 생산성을 더해 결과의 격차를 만듭니다.
                 </p>
             </div>
         </section>
 
-        <!-- Stats Grid -->
-        <section class="max-w-7xl mx-auto mb-40 grid grid-cols-1 md:grid-cols-3 gap-10">
-            <div class="bg-card neon-border p-12 rounded-3xl group">
-                <div class="font-title font-black text-7xl text-neon mb-4 group-hover:scale-110 transition-transform origin-left duration-500">80%</div>
-                <p class="text-gray-400 font-bold uppercase tracking-widest text-xs">제작 시간 단축</p>
-                <div class="h-px bg-white/5 my-6"></div>
-                <p class="text-sm text-gray-600">브랜드 페르소나 학습 기반 워크플로우</p>
-            </div>
-            <div class="bg-card neon-border p-12 rounded-3xl group">
-                <div class="font-title font-black text-7xl text-neon mb-4 group-hover:scale-110 transition-transform origin-left duration-500">200%</div>
-                <p class="text-gray-400 font-bold uppercase tracking-widest text-xs">매출 성장 기여</p>
-                <div class="h-px bg-white/5 my-6"></div>
-                <p class="text-sm text-gray-600">전환 데이터 ROI 최적화 전략</p>
-            </div>
-            <div class="bg-card neon-border p-12 rounded-3xl group">
-                <div class="font-title font-black text-7xl text-neon mb-4 group-hover:scale-110 transition-transform origin-left duration-500">5X</div>
-                <p class="text-gray-400 font-bold uppercase tracking-widest text-xs">업무 속도 향상</p>
-                <div class="h-px bg-white/5 my-6"></div>
-                <p class="text-sm text-gray-600">1인 풀스택 브랜드 빌딩 프로세스</p>
-            </div>
-        </section>
-
-        <!-- AI Powered Workflow -->
+        <!-- AI Powered Workflow (Moved Up) -->
         <section class="max-w-7xl mx-auto mb-40">
-            <h2 class="font-title font-black text-4xl mb-16 uppercase tracking-tighter">AI Powered <span class="text-neon">Workflow</span></h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-card neon-border p-12 rounded-3xl">
-                    <div class="w-12 h-12 bg-neon/10 border border-neon/30 rounded-xl flex items-center justify-center text-neon text-2xl mb-8">📊</div>
-                    <h3 class="font-title font-black text-3xl text-neon mb-6">AI 기반 데이터 전략</h3>
-                    <p class="text-gray-300 text-lg leading-relaxed mb-8">
-                        <span class="text-white font-bold">Google AI Studio</span>로 검색광고 빅데이터를 분석하여 비효율을 제거하고 전환 키워드를 최적화합니다. 20년의 시장 분석 안목을 데이터 마이닝 기술로 치환하여 정밀한 타겟 마케팅을 실현합니다.
-                    </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 border border-neon/30 rounded text-[10px] font-bold text-neon uppercase">AI Studio</span>
-                        <span class="px-3 py-1 border border-neon/30 rounded text-[10px] font-bold text-neon uppercase">Gemini API</span>
-                        <span class="px-3 py-1 border border-neon/30 rounded text-[10px] font-bold text-neon uppercase">Data Mining</span>
-                    </div>
+            <div class="flex flex-col md:flex-row items-end justify-between mb-16 gap-8">
+                <div>
+                    <span class="text-neon font-black uppercase tracking-[0.3em] text-[10px] mb-4 block">Process Innovation</span>
+                    <h2 class="font-title font-black text-4xl md:text-5xl uppercase tracking-tighter">AI Powered <span class="text-neon">Workflow</span></h2>
                 </div>
-                <div class="bg-card neon-border p-12 rounded-3xl">
-                    <div class="w-12 h-12 bg-neon/10 border border-neon/30 rounded-xl flex items-center justify-center text-neon text-2xl mb-8">💻</div>
-                    <h3 class="font-title font-black text-3xl text-neon mb-6">바이브 코딩 실무 구현</h3>
-                    <p class="text-gray-300 text-lg leading-relaxed mb-8">
+                <p class="text-gray-500 max-w-sm text-sm font-medium leading-relaxed">경험의 깊이를 기술의 속도로 전환하는 마케팅 자동화 및 빌드 프로세스입니다.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Vibe Coding (Emphasized) -->
+                <div class="bg-card border-2 border-neon p-12 rounded-[40px] shadow-[0_0_30px_rgba(204,255,0,0.05)] relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-32 h-32" fill="currentColor" viewBox="0 0 24 24"><path d="M24 10.935v2.131l-8 3.947v-2.23l5.64-2.783-5.64-2.79v-2.223l8 3.948zm-16 3.848l-5.64-2.783 5.64-2.79v-2.223l-8 3.948v2.131l8 3.947v-2.23zm7.047-10.783l-2.094 16h2.094l2.093-16h-2.093z"/></svg>
+                    </div>
+                    <div class="w-14 h-14 bg-neon text-black rounded-2xl flex items-center justify-center text-3xl mb-10 shadow-[0_0_20px_rgba(204,255,0,0.3)]">💻</div>
+                    <h3 class="font-title font-black text-3xl md:text-4xl text-neon mb-6 tracking-tighter">바이브 코딩 실무 구현</h3>
+                    <p class="text-gray-100 text-lg leading-relaxed mb-10 tracking-tight">
                         <span class="text-white font-bold">Cursor</span>를 활용해 기획 아이디어를 실제 작동하는 비즈니스 앱과 자동화 툴로 즉각 구현합니다. 기획자가 직접 배포까지 책임지는 1인 풀스택 프로세스로 개발 리소스를 혁신적으로 절감합니다.
                     </p>
                     <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 border border-neon/30 rounded text-[10px] font-bold text-neon uppercase">Cursor</span>
-                        <span class="px-3 py-1 border border-neon/30 rounded text-[10px] font-bold text-neon uppercase">Vibe Coding</span>
-                        <span class="px-3 py-1 border border-neon/30 rounded text-[10px] font-bold text-neon uppercase">Prototyping</span>
+                        <span class="px-4 py-1.5 bg-neon text-black rounded-full text-[10px] font-black uppercase">Cursor</span>
+                        <span class="px-4 py-1.5 border border-neon/30 rounded-full text-[10px] font-black text-neon uppercase">Vibe Coding</span>
+                        <span class="px-4 py-1.5 border border-neon/30 rounded-full text-[10px] font-black text-neon uppercase">Prototyping</span>
+                    </div>
+                </div>
+
+                <div class="bg-card neon-border p-12 rounded-[40px] flex flex-col justify-center">
+                    <div class="w-14 h-14 bg-white/5 border border-white/10 text-neon rounded-2xl flex items-center justify-center text-3xl mb-10">📊</div>
+                    <h3 class="font-title font-black text-3xl text-white mb-6 tracking-tighter">AI 기반 데이터 전략</h3>
+                    <p class="text-gray-400 text-lg leading-relaxed mb-10 tracking-tight">
+                        <span class="text-white font-bold">Google AI Studio</span>로 검색광고 빅데이터를 분석하여 비효율을 제거하고 전환 키워드를 최적화합니다. 20년의 시장 분석 안목을 데이터 마이닝 기술로 치환하여 정밀한 타겟 마케팅을 실현합니다.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-4 py-1.5 border border-white/10 rounded-full text-[10px] font-bold text-gray-500 uppercase">AI Studio</span>
+                        <span class="px-4 py-1.5 border border-white/10 rounded-full text-[10px] font-bold text-gray-500 uppercase">Gemini API</span>
+                        <span class="px-4 py-1.5 border border-white/10 rounded-full text-[10px] font-bold text-gray-500 uppercase">Data Mining</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CORE EXECUTION (New Section with Images) -->
+        <section class="max-w-7xl mx-auto mb-40">
+            <div class="text-center mb-20">
+                <span class="text-neon font-black uppercase tracking-[0.3em] text-[10px] mb-4 block">Real-world Application</span>
+                <h2 class="font-title font-black text-4xl md:text-6xl tracking-tighter uppercase mb-6">Core <span class="text-neon">Execution</span></h2>
+                <p class="text-gray-500 text-lg max-w-2xl mx-auto tracking-tight">기획부터 실행까지, AI를 도구로 완성한 실무 결과물입니다.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <!-- Case 01 -->
+                <div class="group">
+                    <div class="aspect-video rounded-[32px] bg-card neon-border mb-8 overflow-hidden relative">
+                        <div class="absolute inset-0 flex items-center justify-center bg-gray-900 group-hover:scale-105 transition-transform duration-700">
+                            <span class="text-white/10 font-title font-black text-4xl uppercase tracking-widest">SNS Content</span>
+                        </div>
+                        <!-- <img src="images/sns-case.jpg" class="w-full h-full object-cover"> -->
+                    </div>
+                    <div class="px-4">
+                        <span class="text-neon font-bold text-[10px] uppercase tracking-widest mb-2 block">SNS & Content Marketing</span>
+                        <h3 class="text-2xl font-bold text-white mb-4 tracking-tighter">AI 기반 다채널 콘텐츠 양산 체계</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-6">브랜드 톤앤매너를 학습한 AI로 블로그, 카드뉴스, 영상 대본을 실시간 생성하여 마케팅 실행력을 10배 이상 강화했습니다.</p>
+                    </div>
+                </div>
+                <!-- Case 02 -->
+                <div class="group">
+                    <div class="aspect-video rounded-[32px] bg-card neon-border mb-8 overflow-hidden relative text-center">
+                        <div class="absolute inset-0 flex items-center justify-center bg-gray-900 group-hover:scale-105 transition-transform duration-700">
+                            <span class="text-white/10 font-title font-black text-4xl uppercase tracking-widest">Brand Design</span>
+                        </div>
+                        <!-- <img src="images/brand-case.jpg" class="w-full h-full object-cover"> -->
+                    </div>
+                    <div class="px-4">
+                        <span class="text-neon font-bold text-[10px] uppercase tracking-widest mb-2 block">Identity & Packaging</span>
+                        <h3 class="text-2xl font-bold text-white mb-4 tracking-tighter">데이터 중심의 하이엔드 브랜딩</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-6">고관여 고객의 심리를 데이터로 추적하여, 신뢰감을 극대화하는 비주얼 아이덴티티와 패키지 시스템을 기획/제작했습니다.</p>
                     </div>
                 </div>
             </div>
@@ -161,37 +191,37 @@
 
         <!-- Core Competencies -->
         <section class="max-w-7xl mx-auto mb-40">
-            <h2 class="font-title font-black text-4xl mb-16 uppercase tracking-tighter">Core <span class="text-neon">Competencies</span></h2>
+            <h2 class="font-title font-black text-4xl mb-16 uppercase tracking-tighter">Professional <span class="text-neon">Domain</span></h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="bg-card neon-border p-10 rounded-3xl relative overflow-hidden group">
                     <span class="absolute top-6 right-8 font-title font-black text-5xl text-white/5 group-hover:text-neon/10 transition-colors">01</span>
-                    <h3 class="font-title font-bold text-xl text-white mb-4">SNS & Content</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed">SNS 홍보 기획, 채널 관리, 프로모션 디자인 총괄. AI를 활용한 고효율 콘텐츠 양산 체계 구축.</p>
+                    <h3 class="font-title font-bold text-xl text-white mb-4 tracking-tight">SNS & Content</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed tracking-tight">SNS 홍보 기획, 채널 관리, 프로모션 디자인 총괄. AI를 활용한 고효율 콘텐츠 양산 체계 구축.</p>
                 </div>
                 <div class="bg-card neon-border p-10 rounded-3xl relative overflow-hidden group">
                     <span class="absolute top-6 right-8 font-title font-black text-5xl text-white/5 group-hover:text-neon/10 transition-colors">02</span>
-                    <h3 class="font-title font-bold text-xl text-white mb-4">E-Commerce</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed">자사몰/오픈마켓 입점 기획. 상세페이지 및 전환율 중심 퍼포먼스 마케팅 최적화.</p>
+                    <h3 class="font-title font-bold text-xl text-white mb-4 tracking-tight">E-Commerce</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed tracking-tight">자사몰/오픈마켓 입점 기획. 상세페이지 및 전환율 중심 퍼포먼스 마케팅 최적화.</p>
                 </div>
                 <div class="bg-card neon-border p-10 rounded-3xl relative overflow-hidden group">
                     <span class="absolute top-6 right-8 font-title font-black text-5xl text-white/5 group-hover:text-neon/10 transition-colors">03</span>
-                    <h3 class="font-title font-bold text-xl text-white mb-4">Brand Packaging</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed">패키지 아이덴티티 기획, 지기 구조 설계 및 인쇄 공정 총괄. 일관된 브랜드 경험 설계.</p>
+                    <h3 class="font-title font-bold text-xl text-white mb-4 tracking-tight">Brand Packaging</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed tracking-tight">패키지 아이덴티티 기획, 지기 구조 설계 및 인쇄 공정 총괄. 일관된 브랜드 경험 설계.</p>
                 </div>
                 <div class="bg-card neon-border p-10 rounded-3xl relative overflow-hidden group">
                     <span class="absolute top-6 right-8 font-title font-black text-5xl text-white/5 group-hover:text-neon/10 transition-colors">04</span>
-                    <h3 class="font-title font-bold text-xl text-white mb-4">Web Platform</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed">홈페이지 및 쇼핑몰 구축 총괄. UX/UI 기획부터 직접 코딩 협업을 통한 솔루션 제공.</p>
+                    <h3 class="font-title font-bold text-xl text-white mb-4 tracking-tight">Web Platform</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed tracking-tight">홈페이지 및 쇼핑몰 구축 총괄. UX/UI 기획부터 직접 코딩 협업을 통한 솔루션 제공.</p>
                 </div>
                 <div class="bg-card neon-border p-10 rounded-3xl relative overflow-hidden group">
                     <span class="absolute top-6 right-8 font-title font-black text-5xl text-white/5 group-hover:text-neon/10 transition-colors">05</span>
-                    <h3 class="font-title font-bold text-xl text-white mb-4">Design R&D</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed">기업 홍보 전략 및 디자인 시스템 연구/개발. 브랜드 자산 가치를 높이는 독보적 가이드 수립.</p>
+                    <h3 class="font-title font-bold text-xl text-white mb-4 tracking-tight">Design R&D</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed tracking-tight">기업 홍보 전략 및 디자인 시스템 연구/개발. 브랜드 자산 가치를 높이는 독보적 가이드 수립.</p>
                 </div>
                 <div class="bg-card neon-border p-10 rounded-3xl relative overflow-hidden group">
                     <span class="absolute top-6 right-8 font-title font-black text-5xl text-white/5 group-hover:text-neon/10 transition-colors">06</span>
-                    <h3 class="font-title font-bold text-xl text-white mb-4">Exhibition & Space</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed">국내외 전시회 기획 및 공간 디자인 총괄. 오프라인 진열대 및 브랜딩 오브젝트 설계.</p>
+                    <h3 class="font-title font-bold text-xl text-white mb-4 tracking-tight">Exhibition & Space</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed tracking-tight">국내외 전시회 기획 및 공간 디자인 총괄. 오프라인 진열대 및 브랜딩 오브젝트 설계.</p>
                 </div>
             </div>
         </section>
@@ -205,27 +235,27 @@
                 <div class="space-y-20">
                     <div class="relative">
                         <div class="absolute -left-[53px] top-2 w-2 h-2 rounded-full bg-neon shadow-[0_0_10px_#CCFF00]"></div>
-                        <span class="text-neon font-black text-xs tracking-widest uppercase block mb-2">2024 - Present</span>
-                        <h3 class="font-title font-bold text-2xl mb-4">현재 재직 중</h3>
-                        <p class="text-gray-400 max-w-2xl leading-relaxed italic">"20년의 경험은 AI에게 가장 정확한 질문을 던지는 힘이 됩니다. 현장 기획의 본질을 잃지 않으면서 기술을 도구로 활용합니다."</p>
+                        <span class="text-neon font-black text-[10px] tracking-widest uppercase block mb-2">2024 - Present</span>
+                        <h3 class="font-title font-bold text-2xl mb-4 tracking-tight">현재 재직 중</h3>
+                        <p class="text-gray-400 max-w-2xl leading-relaxed italic tracking-tight text-sm">"20년의 경험은 AI에게 가장 정확한 질문을 던지는 힘이 됩니다. 현장 기획의 본질을 잃지 않으면서 기술을 도구로 활용합니다."</p>
                     </div>
                     <div class="relative">
                         <div class="absolute -left-[53px] top-2 w-2 h-2 rounded-full bg-white/20"></div>
-                        <span class="text-gray-600 font-bold text-xs tracking-widest uppercase block mb-2">2022 - 2023</span>
-                        <h3 class="font-title font-bold text-2xl mb-4 text-gray-300">대산 홍보팀</h3>
-                        <p class="text-gray-500 max-w-2xl leading-relaxed">통합 마케팅 전략 수립 및 브랜드 커뮤니케이션 채널 총괄 관리.</p>
+                        <span class="text-gray-600 font-bold text-[10px] tracking-widest uppercase block mb-2">2022 - 2023</span>
+                        <h3 class="font-title font-bold text-2xl mb-4 text-gray-300 tracking-tight">대산 홍보팀</h3>
+                        <p class="text-gray-500 max-w-2xl leading-relaxed tracking-tight text-sm">통합 마케팅 전략 수립 및 브랜드 커뮤니케이션 채널 총괄 관리.</p>
                     </div>
                     <div class="relative">
                         <div class="absolute -left-[53px] top-2 w-2 h-2 rounded-full bg-white/20"></div>
-                        <span class="text-gray-600 font-bold text-xs tracking-widest uppercase block mb-2">2014 - 2022</span>
-                        <h3 class="font-title font-bold text-2xl mb-4 text-gray-300">라이프앤사이언스 디자인팀</h3>
-                        <p class="text-gray-500 max-w-2xl leading-relaxed">디자인 시스템 구축 및 비주얼 아이덴티티 디렉팅. 장기적인 브랜드 일관성 유지 전략 실행.</p>
+                        <span class="text-gray-600 font-bold text-[10px] tracking-widest uppercase block mb-2">2014 - 2022</span>
+                        <h3 class="font-title font-bold text-2xl mb-4 text-gray-300 tracking-tight">라이프앤사이언스 디자인팀</h3>
+                        <p class="text-gray-500 max-w-2xl leading-relaxed tracking-tight text-sm">디자인 시스템 구축 및 비주얼 아이덴티티 디렉팅. 장기적인 브랜드 일관성 유지 전략 실행.</p>
                     </div>
                     <div class="relative">
                         <div class="absolute -left-[53px] top-2 w-2 h-2 rounded-full bg-white/20"></div>
-                        <span class="text-gray-600 font-bold text-xs tracking-widest uppercase block mb-2">2000 - 2014</span>
-                        <h3 class="font-title font-bold text-2xl mb-4 text-gray-300">킴퍼니처 / 대구광역자활센터 / 정원테크</h3>
-                        <p class="text-gray-500 max-w-2xl leading-relaxed">디자인 및 마케팅 실무 역량의 완성기.</p>
+                        <span class="text-gray-600 font-bold text-[10px] tracking-widest uppercase block mb-2">2000 - 2014</span>
+                        <h3 class="font-title font-bold text-2xl mb-4 text-gray-300 tracking-tight">킴퍼니처 / 대구광역자활센터 / 정원테크</h3>
+                        <p class="text-gray-500 max-w-2xl leading-relaxed tracking-tight text-sm">디자인 및 마케팅 실무 역량의 완성기.</p>
                     </div>
                 </div>
             </div>
@@ -234,10 +264,10 @@
 
     <footer class="py-40 text-center border-t border-white/5 bg-black">
         <div class="max-w-4xl mx-auto px-6">
-            <h2 class="font-title font-black text-5xl md:text-8xl leading-none mb-12 tracking-tighter">
-                LET'S <span class="text-neon text-glow italic">CONNECT.</span>
+            <h2 class="font-title font-black text-5xl md:text-8xl leading-none mb-12 tracking-tighter uppercase">
+                Let's <span class="text-neon text-glow italic">Connect.</span>
             </h2>
-            <a href="mailto:hello@brandarchitect.ai" class="text-xl md:text-2xl font-bold text-gray-400 hover:text-neon transition-colors underline underline-offset-8 decoration-white/10 hover:decoration-neon">
+            <a href="mailto:hello@brandarchitect.ai" class="text-xl md:text-2xl font-bold text-gray-400 hover:text-neon transition-colors underline underline-offset-8 decoration-white/10 hover:decoration-neon tracking-tight">
                 hello@brandarchitect.ai
             </a>
         </div>
