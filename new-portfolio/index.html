@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRAND ARCHITECT | Marketing & AI Solution Builder</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        neon: '#CCFF00',
+                        dark: '#000000',
+                        card: '#0A0A0A',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        title: ['Urbanist', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            cursor: default;
+        }
+
+        .text-glow {
+            text-shadow: 0 0 15px rgba(204, 255, 0, 0.4);
+        }
+
+        .bg-glass {
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+        }
+
+        .neon-border {
+            border: 1px solid rgba(204, 255, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .neon-border:hover {
+            border-color: #CCFF00;
+            box-shadow: 0 0 20px rgba(204, 255, 0, 0.1);
+        }
+
+        .gradient-bg {
+            background: radial-gradient(circle at 50% 50%, rgba(204, 255, 0, 0.05) 0%, rgba(0, 0, 0, 0) 70%);
+        }
+
+        .chart-bar {
+            transition: width 1.5s cubic-bezier(0.17, 0.55, 0.55, 1);
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .float-anim {
+            animation: float 6s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-glass border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <div class="font-title font-black text-2xl tracking-tighter">
+                BRAND <span class="text-neon">ARCHITECT.</span>
+            </div>
+            <div class="hidden md:flex space-x-10 text-xs font-bold uppercase tracking-widest text-gray-400">
+                <a href="#home" class="hover:text-neon transition-colors">Home</a>
+                <a href="#about" class="hover:text-neon transition-colors">About</a>
+                <a href="#projects" class="hover:text-neon transition-colors">Projects</a>
+                <a href="#contact" class="hover:text-neon transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative pt-20 overflow-hidden">
+        <div class="absolute inset-0 gradient-bg"></div>
+        <div class="absolute top-1/4 -left-20 w-96 h-96 bg-neon/5 blur-[120px] rounded-full"></div>
+        <div class="absolute bottom-1/4 -right-20 w-96 h-96 bg-neon/5 blur-[120px] rounded-full"></div>
+        
+        <div class="relative z-10 text-center px-6">
+            <h1 class="font-title font-black text-6xl md:text-9xl leading-[0.9] tracking-tighter mb-8">
+                THE BRIDGE:<br/>
+                <span class="text-gray-500">LEGACY</span> <span class="text-neon text-glow italic">x</span> <span class="text-neon text-glow">AI</span>
+            </h1>
+            <p class="max-w-2xl mx-auto text-lg md:text-xl text-gray-400 font-medium leading-relaxed">
+                20년의 전략적 통찰력을 AI 기술적 초월성으로 연결합니다.<br/>
+                본질은 경험에서, 혁신은 도구에서 완성됩니다.
+            </p>
+            <div class="mt-12">
+                <a href="#projects" class="inline-block bg-neon text-black px-10 py-4 rounded-full font-black text-sm uppercase tracking-widest hover:scale-105 transition-transform duration-300">Explore Work</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-32 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <div class="relative">
+                <div class="aspect-square rounded-3xl overflow-hidden bg-card border border-white/10 p-4">
+                    <div class="w-full h-full rounded-2xl bg-gradient-to-br from-gray-800 to-black flex items-center justify-center relative overflow-hidden">
+                        <!-- Profile Placeholder -->
+                        <div class="absolute inset-0 bg-neon/10 mix-blend-overlay"></div>
+                        <span class="text-gray-700 font-title font-black text-9xl">20Y</span>
+                    </div>
+                </div>
+                <div class="absolute -bottom-6 -right-6 bg-neon text-black p-8 rounded-2xl font-black text-center shadow-2xl">
+                    <div class="text-4xl leading-none">20+</div>
+                    <div class="text-[10px] uppercase tracking-widest mt-1">Years Exp.</div>
+                </div>
+            </div>
+            <div>
+                <span class="text-neon font-black uppercase tracking-[0.3em] text-xs mb-4 block">Difference made by experience</span>
+                <h2 class="font-title font-black text-4xl md:text-6xl mb-8 leading-tight">경험이 만드는<br/>압도적인 차이.</h2>
+                <div class="space-y-6 text-gray-400 text-lg leading-relaxed">
+                    <p>단순히 트렌드를 따르는 것이 아니라, 수십 년간 쌓아온 마케팅의 본질적 통찰력에 최신 AI 솔루션을 결합합니다.</p>
+                    <p>기존의 레거시 방식이 가진 한계를 정교한 데이터 워크플로우와 AI 자동화로 해결하여 비즈니스의 폭발적인 성장을 주도합니다.</p>
+                </div>
+                <div class="mt-10 grid grid-cols-2 gap-8">
+                    <div>
+                        <div class="text-3xl font-black text-white mb-2 font-title">ROAS 450%</div>
+                        <p class="text-xs text-gray-500 uppercase tracking-widest font-bold">Max Achievement</p>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-black text-white mb-2 font-title">95% Save</div>
+                        <p class="text-xs text-gray-500 uppercase tracking-widest font-bold">Resource Optimization</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Phase 01: Legacy -->
+    <section id="projects" class="py-32 px-6 bg-white/[0.02]">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
+                <div>
+                    <span class="text-neon font-black uppercase tracking-[0.3em] text-xs mb-4 block">Phase 01: Legacy</span>
+                    <h2 class="font-title font-black text-5xl md:text-7xl">STRATEGIC ASSETS</h2>
+                </div>
+                <p class="text-gray-500 max-w-sm font-medium">브랜드의 가치를 물리적으로 증명하는 완성도 높은 레거시 기획과 세일즈 에셋 제작 사례입니다.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div class="group cursor-pointer">
+                    <div class="aspect-[4/3] rounded-3xl overflow-hidden bg-card neon-border mb-6">
+                        <div class="w-full h-full bg-gray-900 group-hover:scale-105 transition-transform duration-700 relative flex items-center justify-center">
+                            <span class="text-white/20 font-title font-bold text-2xl uppercase">Brand Identity Design</span>
+                        </div>
+                    </div>
+                    <h3 class="font-title font-bold text-2xl mb-2">하이엔드 의료기기 브랜드 인프라</h3>
+                    <p class="text-gray-500 text-sm">브랜드 컨셉부터 온/오프라인 통합 카탈로그 제작 총괄</p>
+                </div>
+                <div class="group cursor-pointer">
+                    <div class="aspect-[4/3] rounded-3xl overflow-hidden bg-card neon-border mb-6">
+                        <div class="w-full h-full bg-gray-900 group-hover:scale-105 transition-transform duration-700 relative flex items-center justify-center">
+                            <span class="text-white/20 font-title font-bold text-2xl uppercase">Sales Asset Creation</span>
+                        </div>
+                    </div>
+                    <h3 class="font-title font-bold text-2xl mb-2">퍼포먼스 마케팅 전략 기획</h3>
+                    <p class="text-gray-500 text-sm">ROAS 최적화를 위한 크리에이티브 가이드 및 콘텐츠 제작</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Phase 02: Future/AI -->
+    <section class="py-32 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
+                <div>
+                    <span class="text-neon font-black uppercase tracking-[0.3em] text-xs mb-4 block">Phase 02: Future</span>
+                    <h2 class="font-title font-black text-5xl md:text-7xl uppercase">AI Innovation</h2>
+                </div>
+                <p class="text-gray-500 max-w-sm font-medium">1인 총괄의 한계를 넘어서는 AI 자동화 워크플로우와 실전형 비즈니스 솔루션입니다.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="lg:col-span-2 bg-card rounded-3xl p-10 neon-border flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-12">
+                            <div class="w-12 h-12 bg-neon rounded-xl flex items-center justify-center text-black font-black text-2xl">
+                                ⚙️
+                            </div>
+                            <span class="text-neon font-mono text-xs uppercase tracking-widest border border-neon/30 px-3 py-1 rounded-full">Automated Workflow</span>
+                        </div>
+                        <h3 class="font-title font-black text-3xl mb-4 leading-tight">AI 기반 통합 마케팅<br/>자동화 엔진 구축</h3>
+                        <p class="text-gray-400 mb-8 max-w-lg">데이터 수집부터 보고서 생성, 콘텐츠 배포까지 인간의 개입을 5% 미만으로 줄인 차세대 마케팅 파이프라인입니다.</p>
+                    </div>
+                    <div class="aspect-video rounded-2xl bg-black border border-white/5 p-6 font-mono text-[10px] text-gray-500 overflow-hidden">
+                        <div class="text-neon mb-2"># Processing AI Task...</div>
+                        <div>> Analyze Search Data</div>
+                        <div>> Generating Insights (Gemini Pro)</div>
+                        <div>> Automating Content Distribution</div>
+                        <div class="text-white mt-4">> STATUS: OPTIMIZED [95% Efficiency]</div>
+                    </div>
+                </div>
+
+                <div class="bg-card rounded-3xl p-10 neon-border">
+                    <div class="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center text-neon text-2xl mb-12">
+                        📊
+                    </div>
+                    <h3 class="font-title font-black text-3xl mb-4 leading-tight">1인 기업용<br/>MVP 대시보드</h3>
+                    <p class="text-gray-400 mb-12">현장 피드백을 기반으로 설계된 1인 총괄 마케터 전용 성과 관리 솔루션입니다.</p>
+                    <div class="space-y-4 opacity-50">
+                        <div class="h-2 bg-white/10 rounded-full w-full"></div>
+                        <div class="h-2 bg-white/10 rounded-full w-3/4"></div>
+                        <div class="h-2 bg-white/10 rounded-full w-1/2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Efficiency Impact Section -->
+    <section class="py-32 px-6 bg-neon text-black">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="font-title font-black text-4xl md:text-6xl mb-20 text-center uppercase tracking-tighter">Efficiency Impact</h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                <div>
+                    <h3 class="font-title font-black text-2xl mb-10 uppercase tracking-widest">Performance Comparison</h3>
+                    <div class="space-y-12">
+                        <!-- Bar Chart Item 1 -->
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-end">
+                                <span class="font-bold text-sm uppercase">Legacy Manual Process</span>
+                                <span class="font-black text-2xl">100h / Month</span>
+                            </div>
+                            <div class="h-4 bg-black/10 rounded-full overflow-hidden">
+                                <div class="h-full bg-black/40 w-full"></div>
+                            </div>
+                        </div>
+                        <!-- Bar Chart Item 2 -->
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-end">
+                                <span class="font-bold text-sm uppercase">AI Powered Solution</span>
+                                <span class="font-black text-2xl">5h / Month</span>
+                            </div>
+                            <div class="h-4 bg-black/10 rounded-full overflow-hidden">
+                                <div class="h-full bg-black w-[5%] chart-bar"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-black text-white rounded-3xl p-10 md:p-16">
+                    <table class="w-full text-left">
+                        <thead>
+                            <tr class="border-b border-white/10">
+                                <th class="pb-6 font-title font-black text-xs uppercase tracking-widest">Metric</th>
+                                <th class="pb-6 font-title font-black text-xs uppercase tracking-widest">Legacy</th>
+                                <th class="pb-6 font-title font-black text-xs uppercase tracking-widest text-neon text-glow">Future AI</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-white/5">
+                            <tr>
+                                <td class="py-6 text-xs font-bold uppercase text-gray-400">Time per Task</td>
+                                <td class="py-6 font-medium">8 Hours</td>
+                                <td class="py-6 font-black text-neon">20 Mins</td>
+                            </tr>
+                            <tr>
+                                <td class="py-6 text-xs font-bold uppercase text-gray-400">Content Volume</td>
+                                <td class="py-6 font-medium">x 1.0</td>
+                                <td class="py-6 font-black text-neon">x 10.0</td>
+                            </tr>
+                            <tr>
+                                <td class="py-6 text-xs font-bold uppercase text-gray-400">Management Cost</td>
+                                <td class="py-6 font-medium">High</td>
+                                <td class="py-6 font-black text-neon">Ultra Low</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact -->
+    <footer id="contact" class="py-40 px-6 relative overflow-hidden bg-black">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-neon/5 blur-[150px] rounded-full"></div>
+        
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <span class="text-neon font-black uppercase tracking-[0.5em] text-xs mb-8 block">Ready for the shift?</span>
+            <h2 class="font-title font-black text-5xl md:text-8xl leading-none mb-16 tracking-tighter">
+                LET'S BUILD<br/>TOGETHER.
+            </h2>
+            
+            <div class="space-y-4">
+                <a href="mailto:hello@brandarchitect.ai" class="text-2xl md:text-4xl font-black hover:text-neon transition-colors duration-300 block underline-offset-8 underline decoration-white/10 hover:decoration-neon">
+                    hello@brandarchitect.ai
+                </a>
+                <p class="text-gray-500 font-bold uppercase tracking-widest text-xs mt-8">Based in Seoul | Available for Global Projects</p>
+            </div>
+
+            <div class="mt-32 pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="font-title font-black tracking-tighter text-sm uppercase">
+                    BRAND <span class="text-neon">ARCHITECT.</span>
+                </div>
+                <div class="text-[10px] text-gray-600 font-bold uppercase tracking-widest">
+                    &copy; 2026 Brand Architect. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
