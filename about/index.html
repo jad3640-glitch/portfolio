@@ -63,6 +63,14 @@
         .glow-text {
             text-shadow: 0 0 20px rgba(204, 255, 0, 0.3);
         }
+
+        .custom-scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .custom-scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
     </style>
 </head>
 <body class="digital-grid min-h-screen">
@@ -239,82 +247,132 @@
             </div>
         </section>
 
-        <!-- 6. Project Gallery -->
-        <section class="py-20 mb-48">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-black uppercase tracking-tighter text-white">Project <span class="text-neon">Gallery</span></h2>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Card 01 -->
-                <div class="glass-card overflow-hidden group cursor-pointer border-zinc-800 hover:border-neon hover:shadow-[0_0_30px_rgba(204,255,0,0.1)]">
-                    <div class="aspect-square bg-zinc-900 overflow-hidden">
-                        <img src="/images/project-1.png" alt="SNS Content Design" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-60 group-hover:opacity-100">
+        <!-- 6. Project Gallery (Horizontal Scroll Layout) -->
+        <section class="py-20 mb-48 overflow-hidden">
+            <div class="max-w-[1400px] mx-auto px-6">
+                <h2 class="text-zinc-500 text-sm font-bold tracking-[0.2em] mb-10 uppercase">Project Gallery</h2>
+                
+                <div class="flex gap-6 overflow-x-auto pb-10 custom-scrollbar-hide">
+                    <!-- Project 01 -->
+                    <div class="min-w-[450px] h-[300px] bg-[#111] rounded-[40px] border border-zinc-800 overflow-hidden relative group cursor-pointer transition-all duration-500 hover:border-neon hover:shadow-[0_0_30px_rgba(204,255,0,0.1)]">
+                        <div class="absolute inset-0 z-0">
+                            <img src="/images/project1.png" alt="SNS CONTENT DESIGN" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                        </div>
+                        <div class="relative z-10 p-8 flex flex-col h-full justify-between">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <span class="text-neon font-bold text-lg block mb-1">01</span>
+                                    <h3 class="text-white text-2xl font-black leading-tight uppercase">
+                                        SNS<br/>CONTENT<br/>DESIGN
+                                    </h3>
+                                </div>
+                                <div class="flex gap-2">
+                                    <div class="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20">
+                                        <div class="w-2 h-2 rounded-full bg-neon"></div>
+                                    </div>
+                                    <div class="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20">
+                                        <div class="w-2 h-2 rounded-full bg-neon"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                                <p class="text-zinc-400 text-sm">SNS 기획, 디자인</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="p-6">
-                        <h3 class="font-bold text-white mb-2">SNS Content Design</h3>
-                        <p class="text-gray-500 text-xs tracking-tight">SNS 기획, 디자인 및 퍼널 구축</p>
-                    </div>
-                </div>
 
-                <!-- Card 02 -->
-                <div class="glass-card overflow-hidden group cursor-pointer border-zinc-800 hover:border-neon hover:shadow-[0_0_30px_rgba(204,255,0,0.1)]">
-                    <div class="aspect-square bg-zinc-900 overflow-hidden">
-                        <img src="/images/project-2.png" alt="E-Commerce Platform" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-60 group-hover:opacity-100">
+                    <!-- Project 02 -->
+                    <div class="min-w-[450px] h-[300px] bg-[#111] rounded-[40px] border border-neon overflow-hidden relative group cursor-pointer transition-all duration-500 hover:shadow-[0_0_30px_rgba(204,255,0,0.1)]">
+                        <div class="absolute inset-0 z-0">
+                            <img src="/images/project2.png" alt="E-COMMERCE PLATFORM" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                        </div>
+                        <div class="relative z-10 p-8 flex flex-col h-full justify-between">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <span class="text-neon font-bold text-lg block mb-1">02</span>
+                                    <h3 class="text-white text-2xl font-black leading-tight uppercase">
+                                        E-COMMERCE<br/>PLATFORM
+                                    </h3>
+                                </div>
+                                <div class="flex gap-2">
+                                    <div class="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20">
+                                        <div class="w-2 h-2 rounded-full bg-neon"></div>
+                                    </div>
+                                    <div class="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20">
+                                        <div class="w-2 h-2 rounded-full bg-neon"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                                <p class="text-zinc-400 text-sm">쇼핑몰 기획, 운영</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="p-6">
-                        <h3 class="font-bold text-white mb-2">E-Commerce Platform</h3>
-                        <p class="text-gray-500 text-xs tracking-tight">쇼핑몰 구축 및 전환율 최적화</p>
-                    </div>
-                </div>
 
-                <!-- Card 03 -->
-                <div class="glass-card overflow-hidden group cursor-pointer border-zinc-800 hover:border-neon hover:shadow-[0_0_30px_rgba(204,255,0,0.1)]">
-                    <div class="aspect-square bg-zinc-900 overflow-hidden">
-                        <img src="/images/project-3.png" alt="Total Brand Design" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-60 group-hover:opacity-100">
+                    <!-- Project 03 -->
+                    <div class="min-w-[450px] h-[300px] bg-[#111] rounded-[40px] border border-zinc-800 overflow-hidden relative group cursor-pointer transition-all duration-500 hover:border-neon hover:shadow-[0_0_30px_rgba(204,255,0,0.1)]">
+                        <div class="absolute inset-0 z-0">
+                            <img src="/images/project3.png" alt="ROBOTORI BRANDING" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                        </div>
+                        <div class="relative z-10 p-8 flex flex-col h-full justify-between">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <span class="text-neon font-bold text-lg block mb-1">03</span>
+                                    <h3 class="text-white text-2xl font-black leading-tight uppercase">
+                                        ROBOTORI<br/>BRANDING
+                                    </h3>
+                                </div>
+                                <div class="flex gap-2">
+                                    <div class="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20">
+                                        <div class="w-2 h-2 rounded-full bg-neon"></div>
+                                    </div>
+                                    <div class="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20">
+                                        <div class="w-2 h-2 rounded-full bg-neon"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                                <p class="text-zinc-400 text-sm">브랜드 패키지 기획</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="p-6">
-                        <h3 class="font-bold text-white mb-2">Total Brand Design</h3>
-                        <p class="text-gray-500 text-xs tracking-tight">브랜드 패키지 및 아이덴티티 기획</p>
-                    </div>
-                </div>
 
-                <!-- Card 04 -->
-                <div class="glass-card overflow-hidden group cursor-pointer border-zinc-800 hover:border-neon hover:shadow-[0_0_30px_rgba(204,255,0,0.1)]">
-                    <div class="aspect-square bg-zinc-900 overflow-hidden">
-                        <img src="/images/project-4.png" alt="R&D Strategy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-60 group-hover:opacity-100">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="font-bold text-white mb-2">R&D Strategy</h3>
-                        <p class="text-gray-500 text-xs tracking-tight">기업 홍보 전략 및 파트너십 구축</p>
-                    </div>
-                </div>
-
-                <!-- Card 05 -->
-                <div class="glass-card overflow-hidden group cursor-pointer border-zinc-800 hover:border-neon hover:shadow-[0_0_30px_rgba(204,255,0,0.1)]">
-                    <div class="aspect-square bg-zinc-900 overflow-hidden">
-                        <img src="/images/project-5.png" alt="Exhibition Space Design" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-60 group-hover:opacity-100">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="font-bold text-white mb-2">Exhibition Space Design</h3>
-                        <p class="text-gray-500 text-xs tracking-tight">3D 부스 렌더링 및 공간 브랜딩</p>
-                    </div>
-                </div>
-
-                <!-- Card 06 -->
-                <div class="glass-card overflow-hidden group cursor-pointer border-zinc-800 hover:border-neon hover:shadow-[0_0_30px_rgba(204,255,0,0.1)]">
-                    <div class="aspect-square bg-zinc-900 overflow-hidden">
-                        <img src="/images/project-6.png" alt="Product R&D Design" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-60 group-hover:opacity-100">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="font-bold text-white mb-2">Product R&D Design</h3>
-                        <p class="text-gray-500 text-xs tracking-tight">제품 패키지 기획 및 디자인</p>
+                    <!-- Project 04 -->
+                    <div class="min-w-[450px] h-[300px] bg-[#111] rounded-[40px] border border-zinc-800 overflow-hidden relative group cursor-pointer transition-all duration-500 hover:border-neon hover:shadow-[0_0_30px_rgba(204,255,0,0.1)]">
+                        <div class="absolute inset-0 z-0">
+                            <img src="/images/project4.png" alt="WEB PLATFORM" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                        </div>
+                        <div class="relative z-10 p-8 flex flex-col h-full justify-between">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <span class="text-neon font-bold text-lg block mb-1">04</span>
+                                    <h3 class="text-white text-2xl font-black leading-tight uppercase">
+                                        WEB<br/>PLATFORM
+                                    </h3>
+                                </div>
+                                <div class="flex gap-2">
+                                    <div class="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20">
+                                        <div class="w-2 h-2 rounded-full bg-neon"></div>
+                                    </div>
+                                    <div class="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20">
+                                        <div class="w-2 h-2 rounded-full bg-neon"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                                <p class="text-zinc-400 text-sm">웹 플랫폼 기획 및 구축</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Profile Info Section (Moved to end) -->
+        <!-- Profile Info Section (End) -->
         <section class="max-w-xl mx-auto mb-24">
             <div class="glass-card p-6 md:p-8 flex items-center gap-8 border-neon/20">
                 <div class="flex-1 text-left">
