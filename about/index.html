@@ -408,5 +408,24 @@
         </a>
     </footer>
 
+    <script>
+        const scrollContainer = document.querySelector('.custom-scrollbar-hide');
+        let isPaused = false;
+
+        scrollContainer.addEventListener('mouseenter', () => { isPaused = true; });
+        scrollContainer.addEventListener('mouseleave', () => { isPaused = false; });
+
+        function autoScroll() {
+            if (!isPaused) {
+                scrollContainer.scrollLeft += 1;
+                if (scrollContainer.scrollLeft >= (scrollContainer.scrollWidth - scrollContainer.clientWidth)) {
+                    scrollContainer.scrollLeft = 0;
+                }
+            }
+            requestAnimationFrame(autoScroll);
+        }
+
+        autoScroll();
+    </script>
 </body>
 </html>
