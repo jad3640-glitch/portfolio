@@ -21,18 +21,13 @@
             color: #ffffff;
             margin: 0;
             overflow-x: hidden;
-            /* Background Image with Fixed Position and Dark Overlay */
-            background-image: 
-                linear-gradient(rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 0.9)), 
-                url('bg_about.png');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            background-repeat: no-repeat;
         }
 
         .digital-grid {
-            /* Keep class for compatibility but remove default grid lines to let bg show */
+            background-image: 
+                linear-gradient(rgba(204, 255, 0, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(204, 255, 0, 0.05) 1px, transparent 1px);
+            background-size: 50px 50px;
         }
 
         .text-neon { color: var(--neon-lime); }
