@@ -45,13 +45,13 @@
 
         /* HERO SECTION */
         .hero {
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 0 10%;
+            padding: 120px 10% 80px;
             position: relative;
         }
 
@@ -237,8 +237,13 @@
         }
 
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; letter-spacing: -1px; }
-            .hero-bg-text { font-size: 40vw; top: 60%; }
+            .hero { padding: 100px 5% 60px; }
+            .badge { font-size: 0.68rem; padding: 8px 16px; letter-spacing: 1px; margin-bottom: 20px; }
+            .hero h1 { font-size: 2.1rem; letter-spacing: -1px; margin-bottom: 20px; }
+            .hero p { font-size: 0.95rem; margin-bottom: 35px; }
+            .tag-container { gap: 10px; }
+            .tag { font-size: 0.78rem; padding: 10px 18px; }
+            .hero-bg-text { font-size: 35vw; top: 60%; }
             .project-grid { grid-template-columns: 1fr; }
             .p-card { padding: 40px 30px; }
             .contact a { font-size: 3rem; letter-spacing: -1px; }
@@ -260,22 +265,20 @@
         <!-- HERO SECTION -->
         <section class="hero">
             <div class="hero-bg-text">BUILDER</div>
-            <div class="badge">Legacy x AI Execution</div>
-            <h1>20년의 브랜드 설계,<br><span>AI로 완성하는 실행의 속도.</span></h1>
+            <div class="badge">Brand Architect &nbsp;•&nbsp; Marketing · AI · Execution</div>
+            <h1>20년의 마케팅 경험,<br><span>AI로 더 빠르게 실행합니다.</span></h1>
             <p>
-                웹디자인, 브랜딩, 통합 기획의 깊은 내공을 바탕으로<br>
-                AI 도구를 활용해 비즈니스의 스케일업을 설계하는 브랜드 아키텍트입니다.
+                브랜딩과 콘텐츠 기획부터 홈페이지, SNS, 검색광고까지 다양한 마케팅 실무를 경험해왔습니다.<br>
+                AI와 자동화 도구를 활용해 반복 업무는 줄이고, 더 빠르고 효율적인 마케팅 실행을 만들어갑니다.
             </p>
             
             <div class="tag-container">
-                <div class="tag outline">Gemini & AI Studio</div>
-                <div class="tag outline">Vibe Coding (Cursor)</div>
-                <div class="tag filled">Brand Strategy</div>
-                <div class="tag outline">Automation</div>
-                <div class="tag filled">200% GROWTH</div>
-                <div class="tag filled">Scale-up Expert</div>
-                <div class="tag outline">Performance Marketing</div>
-                <div class="tag outline">Healthcare Branding</div>
+                <div class="tag filled">MARKETING</div>
+                <div class="tag outline">브랜드 · 콘텐츠 · 검색광고</div>
+                <div class="tag filled">AI & AUTOMATION</div>
+                <div class="tag outline">AI 콘텐츠 · 업무 자동화 · Vibe Coding</div>
+                <div class="tag filled">EXECUTION</div>
+                <div class="tag outline">기획 · 제작 · 운영 · 개선</div>
             </div>
         </section>
 
@@ -311,7 +314,7 @@
         <!-- CONTACT SECTION -->
         <section id="contact" class="contact">
             <p>함께 브랜드의 미래를 고민하고 싶다면</p>
-            <a href="mailto:hello@brandarchitect.ai">Contact Me &rarr;</a>
+            <a href="mailto:jad3640@gmail.com">jad3640@gmail.com</a>
         </section>
     </main>
 
