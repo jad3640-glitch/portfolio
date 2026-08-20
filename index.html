@@ -100,10 +100,11 @@
         .hero h1 span { color: var(--accent); }
 
         .hero p {
-            font-size: 1.25rem;
-            color: var(--text-dim);
-            max-width: 850px;
-            margin-bottom: 70px;
+            font-size: 1.35rem;
+            color: #D6D6D6;
+            max-width: 860px;
+            margin-bottom: 60px;
+            line-height: 1.7;
             word-break: keep-all;
             position: relative;
             z-index: 1;
@@ -114,47 +115,54 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 20px;
-            max-width: 1000px;
+            gap: 16px;
+            max-width: 1100px;
             position: relative;
             z-index: 2;
         }
-        
-        .tag {
-            padding: 15px 30px;
+
+        .tag-group {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 24px;
             border-radius: 50px;
-            font-size: 0.95rem;
-            font-weight: 800;
+            border: 1.5px solid rgba(204, 255, 0, 0.4);
+            background: rgba(12, 12, 12, 0.75);
+            backdrop-filter: blur(10px);
             transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             cursor: default;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+        }
+
+        .tag-badge {
+            background-color: var(--accent);
+            color: #000000;
+            font-size: 0.75rem;
+            font-weight: 900;
+            padding: 4px 12px;
+            border-radius: 20px;
+            letter-spacing: 1px;
             white-space: nowrap;
         }
 
-        .tag.filled {
-            background-color: var(--accent);
-            color: #000;
-            box-shadow: 10px 10px 20px rgba(0,0,0,0.3);
+        .tag-text {
+            color: #FFFFFF;
+            font-size: 0.95rem;
+            font-weight: 700;
+            white-space: nowrap;
+            letter-spacing: 0.5px;
         }
 
-        .tag.outline {
-            border: 2px solid var(--accent);
-            color: var(--accent);
-            background: rgba(0,0,0,0.5);
-        }
+        /* Rotation for Tag Groups */
+        .tag-group:nth-child(1) { transform: rotate(-2deg); }
+        .tag-group:nth-child(2) { transform: rotate(1.5deg); }
+        .tag-group:nth-child(3) { transform: rotate(-1.5deg); }
 
-        /* Random Rotation for Tags */
-        .tag:nth-child(1) { transform: rotate(-5deg); }
-        .tag:nth-child(2) { transform: rotate(3deg); }
-        .tag:nth-child(3) { transform: rotate(-2deg); }
-        .tag:nth-child(4) { transform: rotate(4deg); }
-        .tag:nth-child(5) { transform: rotate(-3deg); }
-        .tag:nth-child(6) { transform: rotate(5deg); }
-        .tag:nth-child(7) { transform: rotate(-4deg); }
-        .tag:nth-child(8) { transform: rotate(2deg); }
-
-        .tag:hover {
-            transform: rotate(0deg) scale(1.1) !important;
-            box-shadow: 0 0 30px rgba(204, 255, 0, 0.5);
+        .tag-group:hover {
+            transform: rotate(0deg) scale(1.05) !important;
+            border-color: var(--accent);
+            box-shadow: 0 0 30px rgba(204, 255, 0, 0.4);
             z-index: 10;
         }
 
@@ -181,40 +189,76 @@
 
         .p-card {
             background: #0A0A0A;
-            border: 1px solid #1A1A1A;
+            border: 1px solid #1F1F1F;
             padding: 60px 50px;
             border-radius: 40px;
             transition: 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
         .p-card:hover { 
-            border-color: rgba(204, 255, 0, 0.3); 
+            border-color: rgba(204, 255, 0, 0.4); 
             transform: translateY(-10px); 
             background: #111111;
-            box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.6);
         }
         
         .p-category { 
-            font-size: 0.7rem; 
+            font-size: 0.75rem; 
             font-weight: 900; 
             color: var(--accent); 
             text-transform: uppercase; 
             letter-spacing: 3px; 
-            margin-bottom: 20px;
-            display: block;
+            margin-bottom: 16px; 
+            display: inline-block;
         }
 
-        .p-card h3 { font-size: 2rem; font-weight: 800; margin-bottom: 25px; color: #fff; line-height: 1.2; }
-        .p-card p { color: #777; font-size: 1rem; margin-bottom: 40px; line-height: 1.8; }
+        .p-card h3 { 
+            font-size: 2rem; 
+            font-weight: 800; 
+            margin-bottom: 20px; 
+            color: #FFFFFF; 
+            line-height: 1.25; 
+        }
+        .p-card p { 
+            color: #B5B5B5; 
+            font-size: 1.05rem; 
+            margin-bottom: 35px; 
+            line-height: 1.75; 
+            word-break: keep-all;
+        }
         
-        .p-tags { display: flex; flex-wrap: wrap; gap: 10px; }
+        .p-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 30px; }
         .p-tags span { 
-            font-size: 0.7rem; 
+            font-size: 0.75rem; 
             color: var(--accent); 
+            background: rgba(204, 255, 0, 0.08);
             border: 1px solid rgba(204, 255, 0, 0.4); 
-            padding: 6px 16px; 
+            padding: 6px 14px; 
             border-radius: 50px; 
             font-weight: 700; 
             font-family: monospace;
+            letter-spacing: 0.5px;
+        }
+
+        .p-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--accent);
+            font-size: 0.8rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-bottom: 1.5px solid var(--accent);
+            padding-bottom: 4px;
+            align-self: flex-start;
+            transition: gap 0.3s ease;
+        }
+        .p-card:hover .p-link {
+            gap: 14px;
         }
 
         /* CONTACT SECTION */
@@ -240,12 +284,22 @@
             .hero { padding: 100px 5% 60px; }
             .badge { font-size: 0.68rem; padding: 8px 16px; letter-spacing: 1px; margin-bottom: 20px; }
             .hero h1 { font-size: 2.1rem; letter-spacing: -1px; margin-bottom: 20px; }
-            .hero p { font-size: 0.95rem; margin-bottom: 35px; }
-            .tag-container { gap: 10px; }
-            .tag { font-size: 0.78rem; padding: 10px 18px; }
+            .hero p { font-size: 1.05rem; line-height: 1.6; margin-bottom: 35px; }
+            .tag-container { gap: 12px; }
+            .tag-group { 
+                padding: 10px 16px; 
+                gap: 8px; 
+                width: 100%;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            .tag-badge { font-size: 0.7rem; padding: 3px 10px; }
+            .tag-text { font-size: 0.85rem; white-space: normal; text-align: center; }
             .hero-bg-text { font-size: 35vw; top: 60%; }
             .project-grid { grid-template-columns: 1fr; }
-            .p-card { padding: 40px 30px; }
+            .p-card { padding: 40px 25px; }
+            .p-card h3 { font-size: 1.6rem; }
+            .p-card p { font-size: 0.98rem; }
             .contact a { font-size: 3rem; letter-spacing: -1px; }
         }
     </style>
@@ -268,17 +322,23 @@
             <div class="badge">Brand Architect &nbsp;•&nbsp; Marketing · AI · Execution</div>
             <h1>20년의 마케팅 경험,<br><span>AI로 더 빠르게 실행합니다.</span></h1>
             <p>
-                브랜딩과 콘텐츠 기획부터 홈페이지, SNS, 검색광고까지 다양한 마케팅 실무를 경험해왔습니다.<br>
-                AI와 자동화 도구를 활용해 반복 업무는 줄이고, 더 빠르고 효율적인 마케팅 실행을 만들어갑니다.
+                브랜딩과 콘텐츠 기획부터 홈페이지, SNS, 검색광고까지<br>
+                다양한 마케팅 실무를 경험하고 AI와 자동화 도구로 실행 효율을 높여왔습니다.
             </p>
             
             <div class="tag-container">
-                <div class="tag filled">MARKETING</div>
-                <div class="tag outline">브랜드 · 콘텐츠 · 검색광고</div>
-                <div class="tag filled">AI & AUTOMATION</div>
-                <div class="tag outline">AI 콘텐츠 · 업무 자동화 · Vibe Coding</div>
-                <div class="tag filled">EXECUTION</div>
-                <div class="tag outline">기획 · 제작 · 운영 · 개선</div>
+                <div class="tag-group">
+                    <span class="tag-badge">MARKETING</span>
+                    <span class="tag-text">브랜드 · 콘텐츠 · 검색광고</span>
+                </div>
+                <div class="tag-group">
+                    <span class="tag-badge">AI & AUTOMATION</span>
+                    <span class="tag-text">AI 콘텐츠 · 업무 자동화 · Vibe Coding</span>
+                </div>
+                <div class="tag-group">
+                    <span class="tag-badge">EXECUTION</span>
+                    <span class="tag-text">기획 · 제작 · 운영 · 개선</span>
+                </div>
             </div>
         </section>
 
@@ -286,27 +346,31 @@
         <section id="projects" class="projects">
             <h2>FEATURED <span>PROJECTS</span></h2>
             <div class="project-grid">
-                <a href="projects/project-01/index.html" class="p-card block no-underline">
-                    <span class="p-category">Scale-up</span>
-                    <h3>통합 브랜드 설계 & 런칭</h3>
-                    <p>웹사이트, 패키지, SNS 기획/디자인 전문성을 모두 통합하여, 브랜드 아이덴티티 수립부터 전체 매체 통합 운영 시스템을 구축했습니다.</p>
-                    <div class="p-tags">
-                        <span>#Marketing</span>
-                        <span>#Branding</span>
-                        <span>#Strategy</span>
+                <a href="projects/project-01/index.html" class="p-card">
+                    <div>
+                        <span class="p-category">Scale-up</span>
+                        <h3>통합 브랜드 설계 & 런칭</h3>
+                        <p>웹사이트, 패키지, SNS 기획/디자인 전문성을 모두 통합하여, 브랜드 아이덴티티 수립부터 전체 매체 통합 운영 시스템을 구축했습니다.</p>
+                        <div class="p-tags">
+                            <span>#Marketing</span>
+                            <span>#Branding</span>
+                            <span>#Strategy</span>
+                        </div>
                     </div>
-                    <span class="inline-block mt-8 text-neon font-black text-xs tracking-widest border-b border-neon pb-1">VIEW CASE STUDY &rarr;</span>
+                    <span class="p-link">VIEW CASE STUDY &rarr;</span>
                 </a>
-                <a href="projects/project-02/index.html" class="p-card block no-underline">
-                    <span class="p-category">Automation</span>
-                    <h3>AI 비즈니스 운영 솔루션</h3>
-                    <p>Cursor와 AI를 활용한 예약 관리 시스템 및 광고 데이터 분석 자동화 구축.</p>
-                    <div class="p-tags">
-                        <span>#Automation</span>
-                        <span>#Vibe_Coding</span>
-                        <span>#AI_Studio</span>
+                <a href="projects/project-02/index.html" class="p-card">
+                    <div>
+                        <span class="p-category">Automation</span>
+                        <h3>AI 비즈니스 운영 솔루션</h3>
+                        <p>Cursor와 AI를 활용한 예약 관리 시스템 및 광고 데이터 분석 자동화 구축.</p>
+                        <div class="p-tags">
+                            <span>#Automation</span>
+                            <span>#Vibe_Coding</span>
+                            <span>#AI_Studio</span>
+                        </div>
                     </div>
-                    <span class="inline-block mt-8 text-neon font-black text-xs tracking-widest border-b border-neon pb-1">VIEW CASE STUDY &rarr;</span>
+                    <span class="p-link">VIEW CASE STUDY &rarr;</span>
                 </a>
             </div>
         </section>
