@@ -3,306 +3,737 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Oxygen Chamber Branding & Marketing | Case Study</title>
+
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Urbanist:wght@700;800;900&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        neon: '#ccff00',
+                        dark: '#080808'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        title: ['Urbanist', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
-        
         :root {
-            --neon-lime: #ccff00;
-            --bg-dark: #0a0a0a;
-            --card-bg: rgba(255, 255, 255, 0.02);
-            --border-color: rgba(204, 255, 0, 0.15);
+            --neon: #ccff00;
+            --bg: #080808;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg-dark);
-            color: #ffffff;
             margin: 0;
+            background: var(--bg);
+            color: #fff;
+            font-family: 'Inter', sans-serif;
             overflow-x: hidden;
-            background-image: 
-                linear-gradient(rgba(204, 255, 0, 0.01) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(204, 255, 0, 0.01) 1px, transparent 1px);
-            background-size: 40px 40px;
         }
 
-        .text-neon { color: var(--neon-lime); }
-        .bg-neon { background-color: var(--neon-lime); }
-        .glow-neon { text-shadow: 0 0 20px rgba(204, 255, 0, 0.5); }
-        .box-glow { box-shadow: 0 0 30px rgba(204, 255, 0, 0.1); }
-
-        .glass-card {
-            background: var(--card-bg);
-            backdrop-filter: blur(10px);
-            border: 1px solid var(--border-color);
-            border-radius: 32px;
-            transition: all 0.3s ease;
-        }
-        .glass-card:hover { border-color: var(--neon-lime); }
-
-        .tag-pill {
-            padding: 4px 10px;
-            border-radius: 4px;
-            font-size: 0.6rem;
-            font-weight: 900;
-            text-transform: uppercase;
-            border: 1px solid var(--neon-lime);
-            color: var(--neon-lime);
-            display: inline-block;
-            margin-bottom: 1rem;
+        img {
+            display: block;
+            max-width: 100%;
         }
 
-        .stat-card {
-            background: var(--neon-lime);
-            color: black;
-            border-radius: 24px;
-            padding: 2rem;
+        .neon {
+            color: var(--neon);
         }
 
-        .section-divider {
+        .title-font {
+            font-family: 'Urbanist', sans-serif;
+        }
+
+        .grid-bg {
+            background-image:
+                linear-gradient(rgba(204,255,0,.025) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(204,255,0,.025) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+
+        .glass {
+            background: rgba(255,255,255,.025);
+            border: 1px solid rgba(255,255,255,.09);
+        }
+
+        .image-frame {
+            background: #0d0d0d;
+            border: 1px solid rgba(255,255,255,.1);
+            overflow: hidden;
+        }
+
+        .image-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform .6s ease;
+        }
+
+        .image-frame:hover img {
+            transform: scale(1.025);
+        }
+
+        .fade-line {
             height: 1px;
-            background: linear-gradient(90deg, transparent, var(--border-color), transparent);
-            margin: 80px 0;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(204,255,0,.5),
+                transparent
+            );
         }
-
-        .nav-link:hover { color: var(--neon-lime); }
     </style>
 </head>
-<body class="min-h-screen">
 
-    <nav class="flex justify-between items-center p-8 max-w-7xl mx-auto relative z-50">
-        <div class="text-xl font-black tracking-tighter text-neon">BRAND ARCHITECT.</div>
-        <div class="hidden md:flex space-x-12 text-xs font-bold uppercase tracking-widest text-gray-500">
-            <a href="../../index.html" class="nav-link">Home</a>
-            <a href="../../about/index.html" class="nav-link">About</a>
-            <a href="../../index.html#projects" class="nav-link">Projects</a>
+<body class="grid-bg">
+
+    <!-- NAV -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-black/80 backdrop-blur-xl border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 md:px-10 py-5 flex items-center justify-between">
+
+            <a href="../../index.html"
+               class="title-font font-black text-lg md:text-xl neon tracking-tight">
+                BRAND ARCHITECT.
+            </a>
+
+            <div class="hidden md:flex items-center gap-8 text-xs font-bold tracking-widest text-gray-500 uppercase">
+                <a href="../../index.html" class="hover:text-white transition">Home</a>
+                <a href="../../about/index.html" class="hover:text-white transition">About</a>
+                <a href="../../index.html#projects" class="hover:text-white transition">Projects</a>
+            </div>
+
+            <a href="../../index.html#projects"
+               class="text-xs font-bold tracking-widest uppercase border border-white/10 px-5 py-2.5 rounded-full hover:border-[#ccff00] hover:text-[#ccff00] transition">
+                Back
+            </a>
+
         </div>
-        <a href="../../index.html#projects" class="text-white text-xs font-bold uppercase tracking-widest border border-white/10 px-6 py-2 rounded hover:border-neon hover:text-neon transition-all">Back to List</a>
     </nav>
 
-    <main class="max-w-7xl mx-auto px-6 py-20 relative z-10">
-        
-        <!-- Hero Section -->
-        <header class="mb-24 text-center">
-            <span class="text-neon font-black uppercase tracking-widest text-xs mb-6 block">CASE STUDY · MARKETING PORTFOLIO</span>
-            <h1 class="text-5xl md:text-8xl font-black leading-[1.1] tracking-tighter mb-4">
-                Oxygen Chamber <br/>
-                <span class="text-neon">Branding & Marketing</span>
-            </h1>
-            <p class="text-xl md:text-2xl font-bold text-gray-300 mb-6">
-                Zero to One · 하이엔드 브랜드 인프라 구축
-            </p>
-            <p class="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed mb-16">
-                브랜딩이 없는 상태에서 시작해 브랜드 인프라부터 디지털 채널, 콘텐츠, 마케팅 운영까지 구축하고 지속적으로 개선해온 프로젝트입니다.
-            </p>
-            
-            <div class="relative w-full max-w-6xl mx-auto">
-                <div class="glass-card p-2 box-glow overflow-hidden rounded-[20px]">
-                    <img src="hero.png" alt="Oxygen Chamber Marketing Portfolio" class="w-full h-auto rounded-[20px] opacity-100 transition-all duration-700">
-                </div>
-                <!-- Glow effects -->
-                <div class="absolute -top-20 -right-20 w-60 h-60 bg-neon/10 blur-[100px] rounded-full"></div>
-                <div class="absolute -bottom-20 -left-20 w-60 h-60 bg-neon/5 blur-[100px] rounded-full"></div>
-            </div>
-        </header>
 
-        <div class="section-divider"></div>
+    <main class="pt-28 md:pt-36">
 
-        <!-- Project Overview -->
-        <section class="mb-32">
-            <span class="text-neon font-black uppercase tracking-widest text-xs mb-3 block">Overview</span>
-            <h2 class="text-2xl md:text-3xl font-black text-white uppercase tracking-tight mb-8">Project Overview</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="glass-card p-6">
-                    <span class="text-xs font-bold text-gray-500 uppercase tracking-widest block mb-2">Timeline</span>
-                    <p class="text-white font-bold text-base md:text-lg">2024.08 &mdash; PRESENT</p>
-                </div>
-                <div class="glass-card p-6">
-                    <span class="text-xs font-bold text-gray-500 uppercase tracking-widest block mb-2">Role</span>
-                    <p class="text-white font-bold text-base md:text-lg">Marketing · Brand · Digital · AI</p>
-                </div>
-                <div class="glass-card p-6">
-                    <span class="text-xs font-bold text-gray-500 uppercase tracking-widest block mb-2">Scope</span>
-                    <p class="text-white font-bold text-sm md:text-base leading-snug">Brand Strategy · Web · Content · Marketing · Automation</p>
-                </div>
-                <div class="glass-card p-6">
-                    <span class="text-xs font-bold text-gray-500 uppercase tracking-widest block mb-2">Approach</span>
-                    <p class="text-white font-bold text-base md:text-lg">1인 중심 기획·실행 + AI 활용</p>
-                </div>
+
+        <!-- ================================================= -->
+        <!-- 01 HERO -->
+        <!-- ================================================= -->
+
+        <section class="max-w-7xl mx-auto px-6 md:px-10">
+
+            <div class="max-w-5xl">
+
+                <p class="neon text-xs md:text-sm font-black tracking-[.3em] uppercase mb-6">
+                    CASE STUDY 01 · 2024.08 — PRESENT
+                </p>
+
+                <h1 class="title-font font-black tracking-[-.05em] leading-[.95]
+                           text-5xl sm:text-7xl md:text-8xl lg:text-[7.5rem]">
+
+                    산소챔버 브랜드를<br>
+
+                    <span class="neon">처음부터 만들었습니다.</span>
+
+                </h1>
+
+                <p class="mt-8 text-lg md:text-2xl text-gray-400
+                          leading-relaxed max-w-3xl">
+
+                    브랜드 전략부터 홈페이지, 콘텐츠, SNS,
+                    검색광고까지 초기 브랜드 구축과 마케팅 실행을 담당했습니다.
+
+                </p>
+
             </div>
+
+
+            <!-- HERO IMAGE -->
+
+            <div class="mt-14 md:mt-20 image-frame rounded-3xl p-2 md:p-3">
+
+                <div class="aspect-[16/9] rounded-2xl overflow-hidden bg-[#111]">
+
+                    <img
+                        src="hero.png"
+                        alt="Oxygen Chamber Branding Hero"
+                        onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center text-gray-600 text-sm\'>HERO IMAGE</div>'"
+                    >
+
+                </div>
+
+            </div>
+
         </section>
 
-        <!-- The Challenge -->
-        <section class="mb-32">
-            <div class="glass-card p-8 md:p-12 border-neon/30 bg-neon/[0.02]">
-                <span class="tag-pill text-neon border-neon">THE CHALLENGE</span>
-                <h2 class="text-2xl md:text-4xl font-black text-white leading-snug mb-6">
-                    브랜딩이 없는 상태에서,<br class="hidden md:block"/>
+
+
+        <!-- ================================================= -->
+        <!-- 02 PROJECT SNAPSHOT -->
+        <!-- ================================================= -->
+
+        <section class="max-w-7xl mx-auto px-6 md:px-10 mt-20 md:mt-28">
+
+            <div class="glass rounded-3xl p-7 md:p-10">
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+                    <div>
+                        <p class="text-xs text-gray-500 uppercase tracking-widest mb-3">
+                            PROJECT
+                        </p>
+
+                        <h2 class="title-font text-2xl md:text-3xl font-black">
+                            Oxygen Chamber<br>
+                            Branding
+                        </h2>
+                    </div>
+
+
+                    <div>
+                        <p class="text-xs text-gray-500 uppercase tracking-widest mb-3">
+                            ROLE
+                        </p>
+
+                        <p class="text-xl md:text-2xl font-bold neon">
+                            Brand · Marketing · Digital
+                        </p>
+                    </div>
+
+
+                    <div>
+                        <p class="text-xs text-gray-500 uppercase tracking-widest mb-3">
+                            KEY WORK
+                        </p>
+
+                        <p class="text-lg md:text-xl font-semibold text-gray-300 leading-relaxed">
+                            Branding · Homepage · Content · SNS · Search Ads
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================================================= -->
+        <!-- 03 CHALLENGE -->
+        <!-- ================================================= -->
+
+        <section class="max-w-7xl mx-auto px-6 md:px-10 mt-28 md:mt-40">
+
+            <p class="neon text-xs font-black tracking-[.3em] uppercase mb-6">
+                THE CHALLENGE
+            </p>
+
+            <h2 class="title-font font-black leading-tight tracking-tight
+                       text-4xl md:text-6xl lg:text-7xl max-w-5xl">
+
+                브랜드가 없는 상태에서,<br>
+
+                <span class="text-gray-500">
                     고관여 제품의 신뢰를 어떻게 만들 것인가?
+                </span>
+
+            </h2>
+
+            <div class="fade-line mt-12"></div>
+
+        </section>
+
+
+
+        <!-- ================================================= -->
+        <!-- 04 WHAT I BUILT -->
+        <!-- ================================================= -->
+
+        <section class="max-w-7xl mx-auto px-6 md:px-10 mt-28 md:mt-40">
+
+            <div class="mb-12">
+
+                <p class="neon text-xs font-black tracking-[.3em] uppercase mb-4">
+                    MY CONTRIBUTION
+                </p>
+
+                <h2 class="title-font text-4xl md:text-6xl font-black">
+                    WHAT I BUILT
                 </h2>
-                <p class="text-gray-300 text-base md:text-lg leading-relaxed max-w-4xl">
-                    고가·고관여 제품인 산소챔버는 제품 자체의 설명만으로 고객의 신뢰를 얻기 어렵습니다. 브랜드의 전문성과 신뢰를 전달할 수 있는 디지털 접점과 마케팅 인프라를 처음부터 구축할 필요가 있었습니다.
+
+            </div>
+
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+
+                <!-- 01 -->
+
+                <div class="glass rounded-3xl p-8 md:p-10 min-h-[240px]
+                            hover:border-[#ccff00]/50 transition">
+
+                    <p class="neon text-sm font-black mb-10">
+                        01
+                    </p>
+
+                    <h3 class="title-font text-3xl font-black mb-3">
+                        BRAND
+                    </h3>
+
+                    <p class="text-gray-400 text-base md:text-lg">
+                        브랜드 전략 · 포지셔닝 · 메시지
+                    </p>
+
+                </div>
+
+
+                <!-- 02 -->
+
+                <div class="glass rounded-3xl p-8 md:p-10 min-h-[240px]
+                            hover:border-[#ccff00]/50 transition">
+
+                    <p class="neon text-sm font-black mb-10">
+                        02
+                    </p>
+
+                    <h3 class="title-font text-3xl font-black mb-3">
+                        DIGITAL
+                    </h3>
+
+                    <p class="text-gray-400 text-base md:text-lg">
+                        홈페이지 · 디지털 채널 구축
+                    </p>
+
+                </div>
+
+
+                <!-- 03 -->
+
+                <div class="glass rounded-3xl p-8 md:p-10 min-h-[240px]
+                            hover:border-[#ccff00]/50 transition">
+
+                    <p class="neon text-sm font-black mb-10">
+                        03
+                    </p>
+
+                    <h3 class="title-font text-3xl font-black mb-3">
+                        CONTENT
+                    </h3>
+
+                    <p class="text-gray-400 text-base md:text-lg">
+                        콘텐츠 · SNS · 채널 운영
+                    </p>
+
+                </div>
+
+
+                <!-- 04 -->
+
+                <div class="glass rounded-3xl p-8 md:p-10 min-h-[240px]
+                            hover:border-[#ccff00]/50 transition">
+
+                    <p class="neon text-sm font-black mb-10">
+                        04
+                    </p>
+
+                    <h3 class="title-font text-3xl font-black mb-3">
+                        PERFORMANCE
+                    </h3>
+
+                    <p class="text-gray-400 text-base md:text-lg">
+                        검색광고 · 키워드 · 성과관리
+                    </p>
+
+                </div>
+
+
+                <!-- 05 -->
+
+                <div class="rounded-3xl p-8 md:p-10 min-h-[240px]
+                            bg-[#ccff00] text-black">
+
+                    <p class="text-sm font-black mb-10">
+                        05
+                    </p>
+
+                    <h3 class="title-font text-3xl font-black mb-3">
+                        AI WORKFLOW
+                    </h3>
+
+                    <p class="text-black/70 text-base md:text-lg font-semibold">
+                        콘텐츠 제작 · 반복업무 자동화
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================================================= -->
+        <!-- 05 SELECTED WORK -->
+        <!-- ================================================= -->
+
+        <section class="max-w-7xl mx-auto px-6 md:px-10 mt-28 md:mt-40">
+
+            <div class="mb-12">
+
+                <p class="neon text-xs font-black tracking-[.3em] uppercase mb-4">
+                    VISUAL EVIDENCE
                 </p>
-            </div>
-        </section>
 
-        <!-- My Role -->
-        <section class="mb-32">
-            <span class="text-neon font-black uppercase tracking-widest text-xs mb-3 block">Responsibilities</span>
-            <h2 class="text-2xl md:text-3xl font-black text-white uppercase tracking-tight mb-8">My Role</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="glass-card p-8">
-                    <span class="text-xs font-bold text-neon uppercase tracking-widest block mb-3">01</span>
-                    <h3 class="text-xl font-bold text-white mb-2">Brand Strategy</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">브랜드 포지셔닝 및 브랜딩 방향 설계</p>
-                </div>
-                <div class="glass-card p-8">
-                    <span class="text-xs font-bold text-neon uppercase tracking-widest block mb-3">02</span>
-                    <h3 class="text-xl font-bold text-white mb-2">Digital Platform</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">공식 홈페이지 기획·구축 및 디지털 채널 운영</p>
-                </div>
-                <div class="glass-card p-8">
-                    <span class="text-xs font-bold text-neon uppercase tracking-widest block mb-3">03</span>
-                    <h3 class="text-xl font-bold text-white mb-2">Content & Marketing</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">콘텐츠, SNS, 검색광고 등 마케팅 실행</p>
-                </div>
-                <div class="glass-card p-8">
-                    <span class="text-xs font-bold text-neon uppercase tracking-widest block mb-3">04</span>
-                    <h3 class="text-xl font-bold text-white mb-2">AI Workflow</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">콘텐츠 제작 및 검색광고 리포트 업무 자동화</p>
-                </div>
-                <div class="glass-card p-8">
-                    <span class="text-xs font-bold text-neon uppercase tracking-widest block mb-3">05</span>
-                    <h3 class="text-xl font-bold text-white mb-2">Sales Support</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">영업 카탈로그 및 홍보 에셋 제작</p>
-                </div>
-            </div>
-        </section>
+                <h2 class="title-font text-4xl md:text-6xl font-black">
+                    SELECTED WORK
+                </h2>
 
-        <!-- Scope of Works -->
-        <section class="mb-32">
-            <span class="text-neon font-black uppercase tracking-widest text-xs mb-3 block">Execution</span>
-            <h2 class="text-2xl md:text-3xl font-black text-white uppercase tracking-tight mb-8">Detailed Scope of Works</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
-                <div class="glass-card p-10 flex flex-col justify-between">
-                    <div>
-                        <span class="tag-pill">01</span>
-                        <h3 class="text-xl font-bold text-white mb-4">Brand Identity</h3>
-                        <p class="text-gray-400 text-sm leading-relaxed">프리미엄 포지셔닝 전략을 수립하고 고관여 고객에게 일관된 브랜드 경험을 전달할 수 있는 온·오프라인 브랜딩 시스템을 설계했습니다.</p>
-                    </div>
-                </div>
-
-                <div class="glass-card p-10 flex flex-col justify-between">
-                    <div>
-                        <span class="tag-pill">02</span>
-                        <h3 class="text-xl font-bold text-white mb-4">Digital Platform</h3>
-                        <p class="text-gray-400 text-sm leading-relaxed">공식 홈페이지를 기획·구축하고 SNS 등 디지털 고객 접점을 정비하여 브랜드 정보를 전달할 수 있는 기반을 구축했습니다.</p>
-                    </div>
-                </div>
-
-                <div class="glass-card p-10 flex flex-col justify-between">
-                    <div>
-                        <span class="tag-pill">03</span>
-                        <h3 class="text-xl font-bold text-white mb-4">Content & Marketing</h3>
-                        <p class="text-gray-400 text-sm leading-relaxed">블로그, 카드뉴스, SNS 콘텐츠와 검색광고 등 브랜드 인지도와 고객 접점을 확대하기 위한 마케팅 실행을 진행했습니다.</p>
-                    </div>
-                </div>
-
-                <div class="glass-card p-10 flex flex-col justify-between border-neon/30 bg-neon/5">
-                    <div>
-                        <span class="tag-pill bg-neon text-black">04 · AI Driven</span>
-                        <h3 class="text-xl font-bold text-neon mb-4">AI Workflow</h3>
-                        <p class="text-gray-200 text-sm leading-relaxed font-medium">AI를 활용한 블로그·카드뉴스 제작과 네이버 검색광고 성과 리포트 자동화 등 반복적인 마케팅 업무의 효율화를 진행했습니다.</p>
-                    </div>
-                </div>
-
-                <div class="glass-card p-10 flex flex-col justify-between">
-                    <div>
-                        <span class="tag-pill">05</span>
-                        <h3 class="text-xl font-bold text-white mb-4">Sales Support</h3>
-                        <p class="text-gray-400 text-sm leading-relaxed">고관여 고객에게 제품과 브랜드의 전문성을 전달하기 위한 영업 카탈로그 및 온·오프라인 홍보 에셋 제작을 총괄했습니다.</p>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- Next-Gen Development -->
-        <section class="mb-32">
-            <div class="glass-card p-8 md:p-12 border-neon/40 bg-neon/[0.03]">
-                <span class="tag-pill bg-neon text-black font-black">AI & Coding</span>
-                <h2 class="text-2xl md:text-3xl font-black text-white mb-4">Next-Gen Development</h2>
-                <p class="text-gray-200 text-base md:text-lg leading-relaxed max-w-4xl">
-                    Cursor(Vibe Coding)를 활용해 고객 예약 관리 전용 웹앱을 직접 개발하고 실무에 적용하여 기존 운영 프로세스를 디지털화했습니다.
+                <p class="mt-5 text-lg md:text-xl text-gray-500">
+                    실제 프로젝트에서 제작하고 운영한 결과물
                 </p>
+
             </div>
+
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+
+                <!-- IMAGE 01 -->
+
+                <article>
+
+                    <div class="image-frame rounded-3xl aspect-[16/10]">
+
+                        <img
+                            src="../images/project-detail-main.png"
+                            alt="홈페이지 및 디지털 플랫폼"
+                            onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center text-gray-600\'>IMAGE 01</div>'"
+                        >
+
+                    </div>
+
+                    <div class="mt-5">
+
+                        <p class="neon text-xs font-black tracking-widest mb-2">
+                            01 · DIGITAL
+                        </p>
+
+                        <h3 class="title-font text-2xl md:text-3xl font-black">
+                            Homepage
+                        </h3>
+
+                        <p class="text-gray-500 mt-2">
+                            브랜드 디지털 접점 구축
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- IMAGE 02 -->
+
+                <article>
+
+                    <div class="image-frame rounded-3xl aspect-[16/10]
+                                flex items-center justify-center">
+
+                        <div class="text-center">
+
+                            <div class="text-5xl text-[#ccff00]/30 mb-4">
+                                +
+                            </div>
+
+                            <p class="text-gray-600 text-sm">
+                                BRAND IMAGE
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="mt-5">
+
+                        <p class="neon text-xs font-black tracking-widest mb-2">
+                            02 · BRAND
+                        </p>
+
+                        <h3 class="title-font text-2xl md:text-3xl font-black">
+                            Brand Identity
+                        </h3>
+
+                        <p class="text-gray-500 mt-2">
+                            카탈로그 · 브랜드 에셋
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- IMAGE 03 -->
+
+                <article>
+
+                    <div class="image-frame rounded-3xl aspect-[16/10]
+                                flex items-center justify-center">
+
+                        <div class="text-center">
+
+                            <div class="text-5xl text-[#ccff00]/30 mb-4">
+                                +
+                            </div>
+
+                            <p class="text-gray-600 text-sm">
+                                CONTENT IMAGE
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="mt-5">
+
+                        <p class="neon text-xs font-black tracking-widest mb-2">
+                            03 · CONTENT
+                        </p>
+
+                        <h3 class="title-font text-2xl md:text-3xl font-black">
+                            Content & SNS
+                        </h3>
+
+                        <p class="text-gray-500 mt-2">
+                            콘텐츠 제작 · SNS 운영
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- IMAGE 04 -->
+
+                <article>
+
+                    <div class="image-frame rounded-3xl aspect-[16/10]
+                                flex items-center justify-center">
+
+                        <div class="text-center">
+
+                            <div class="text-5xl text-[#ccff00]/30 mb-4">
+                                +
+                            </div>
+
+                            <p class="text-gray-600 text-sm">
+                                AI IMAGE
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="mt-5">
+
+                        <p class="neon text-xs font-black tracking-widest mb-2">
+                            04 · AI
+                        </p>
+
+                        <h3 class="title-font text-2xl md:text-3xl font-black">
+                            AI Workflow
+                        </h3>
+
+                        <p class="text-gray-500 mt-2">
+                            마케팅 업무 자동화
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
         </section>
 
-        <!-- Visual Evidence -->
-        <section class="mb-32">
-            <span class="text-neon font-black uppercase tracking-widest text-xs mb-3 block">Visual Evidence</span>
-            <h2 class="text-2xl md:text-3xl font-black text-white uppercase tracking-tight mb-8">Brand & Digital Asset Showcase</h2>
-            <div class="glass-card p-4 md:p-6 box-glow overflow-hidden rounded-[24px]">
-                <img src="../images/project-detail-main.png" alt="Oxygen Chamber Brand & Digital Platform Evidence" class="w-full h-auto rounded-[18px]">
-                <p class="text-xs text-gray-400 mt-4 text-center">공식 웹사이트 및 고관여 고객 설득을 위한 온·오프라인 마케팅/영업 에셋 구축 화면</p>
-            </div>
-        </section>
 
-        <!-- Project Result -->
-        <section class="mb-32">
-            <div class="stat-card p-8 md:p-12 rounded-[24px]">
-                <span class="text-xs font-black uppercase tracking-widest block text-black/60 mb-2">Outcome</span>
-                <h2 class="text-3xl md:text-4xl font-black mb-6 uppercase tracking-tight text-black">Project Result</h2>
-                <p class="text-black text-lg md:text-xl font-bold leading-relaxed max-w-3xl">
-                    브랜드 구축부터 디지털 채널, 콘텐츠·마케팅 운영, AI 기반 업무 효율화까지<br class="hidden md:block"/>
-                    초기 브랜드가 지속적으로 운영될 수 있는 통합 마케팅 인프라를 구축했습니다.
+
+        <!-- ================================================= -->
+        <!-- 06 AI -->
+        <!-- ================================================= -->
+
+        <section class="max-w-7xl mx-auto px-6 md:px-10 mt-28 md:mt-40">
+
+            <div class="rounded-3xl bg-[#ccff00] text-black p-10 md:p-16">
+
+                <p class="text-xs font-black tracking-[.3em] uppercase mb-6">
+                    NEXT-GEN MARKETING
                 </p>
+
+                <h2 class="title-font text-4xl md:text-6xl lg:text-7xl font-black tracking-tight">
+                    AI × MARKETING
+                </h2>
+
+                <p class="mt-8 text-xl md:text-3xl font-bold leading-relaxed max-w-4xl">
+                    반복적인 마케팅 업무를 AI와 Vibe Coding으로
+                    더 빠르게 실행할 수 있는 워크플로우로 전환했습니다.
+                </p>
+
+                <div class="mt-10 flex flex-wrap gap-3">
+
+                    <span class="px-5 py-2 rounded-full bg-black text-[#ccff00] text-sm font-bold">
+                        Gemini
+                    </span>
+
+                    <span class="px-5 py-2 rounded-full bg-black text-[#ccff00] text-sm font-bold">
+                        AI Studio
+                    </span>
+
+                    <span class="px-5 py-2 rounded-full bg-black text-[#ccff00] text-sm font-bold">
+                        Cursor
+                    </span>
+
+                    <span class="px-5 py-2 rounded-full bg-black text-[#ccff00] text-sm font-bold">
+                        Automation
+                    </span>
+
+                </div>
+
             </div>
+
         </section>
 
-        <!-- Tools & Workflow -->
-        <section class="mb-32">
-            <span class="text-neon font-black uppercase tracking-widest text-xs mb-3 block">Tech Stack</span>
-            <h2 class="text-2xl md:text-3xl font-black text-white uppercase tracking-tight mb-8">Tools & Workflow</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="glass-card p-6">
-                    <span class="text-xs font-bold text-gray-500 uppercase tracking-wider block mb-2">AI</span>
-                    <p class="text-white font-bold text-base">Gemini · AI Studio · Cursor</p>
-                </div>
-                <div class="glass-card p-6">
-                    <span class="text-xs font-bold text-gray-500 uppercase tracking-wider block mb-2">Marketing</span>
-                    <p class="text-white font-bold text-base">Naver Search Ads</p>
-                </div>
-                <div class="glass-card p-6">
-                    <span class="text-xs font-bold text-gray-500 uppercase tracking-wider block mb-2">Web & Dev</span>
-                    <p class="text-white font-bold text-base">HTML · CSS · Vibe Coding</p>
-                </div>
-                <div class="glass-card p-6">
-                    <span class="text-xs font-bold text-gray-500 uppercase tracking-wider block mb-2">Content</span>
-                    <p class="text-white font-bold text-base">AI Content Workflow</p>
-                </div>
+
+
+        <!-- ================================================= -->
+        <!-- 07 RESULT -->
+        <!-- ================================================= -->
+
+        <section class="max-w-7xl mx-auto px-6 md:px-10 mt-28 md:mt-40">
+
+            <div class="text-center py-16 md:py-28">
+
+                <p class="neon text-xs font-black tracking-[.3em] uppercase mb-8">
+                    FROM ZERO TO ONE
+                </p>
+
+                <h2 class="title-font text-4xl md:text-6xl lg:text-7xl font-black leading-tight">
+
+                    브랜드부터 디지털 채널,<br>
+
+                    <span class="text-gray-500">
+                        마케팅 운영까지 연결했습니다.
+                    </span>
+
+                </h2>
+
+                <p class="mt-8 text-lg md:text-xl text-gray-500 max-w-2xl mx-auto leading-relaxed">
+
+                    전략을 세우는 것에서 끝나지 않고
+                    실제 브랜드 구축과 운영까지 직접 실행한 프로젝트입니다.
+
+                </p>
+
             </div>
+
         </section>
 
-        <!-- Next Project Navigation -->
-        <section class="py-20 flex justify-center border-t border-white/5">
-            <a href="../project-02/index.html" class="group flex items-center space-x-4 bg-neon px-8 py-4 rounded-full text-black font-black hover:scale-105 transition-transform">
-                <span>NEXT PROJECT: AI 자동화 솔루션</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 group-hover:translate-x-2 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="9 5l7 7-7 7" />
-                </svg>
-            </a>
+
+
+        <!-- ================================================= -->
+        <!-- 08 TOOLS -->
+        <!-- ================================================= -->
+
+        <section class="max-w-7xl mx-auto px-6 md:px-10 pb-20">
+
+            <div class="border-t border-white/10 pt-10">
+
+                <p class="text-xs text-gray-600 font-bold tracking-widest uppercase mb-4">
+                    TOOLS
+                </p>
+
+                <p class="text-sm md:text-base text-gray-500">
+                    Gemini · AI Studio · Cursor · Naver Search Ads · HTML/CSS
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- NEXT PROJECT -->
+
+        <section class="border-t border-white/10">
+
+            <div class="max-w-7xl mx-auto px-6 md:px-10 py-20 flex justify-between items-center">
+
+                <div>
+
+                    <p class="text-xs text-gray-600 uppercase tracking-widest mb-3">
+                        NEXT PROJECT
+                    </p>
+
+                    <h3 class="title-font text-2xl md:text-4xl font-black">
+                        AI 자동화 솔루션
+                    </h3>
+
+                </div>
+
+                <a href="../project-02/index.html"
+                   class="w-14 h-14 md:w-16 md:h-16 rounded-full bg-[#ccff00]
+                          text-black flex items-center justify-center
+                          text-2xl hover:scale-110 transition">
+                    →
+                </a>
+
+            </div>
+
         </section>
 
     </main>
 
-    <footer class="py-32 text-center border-t border-white/5 bg-black relative z-10">
-        <p class="text-gray-600 text-xs font-bold uppercase tracking-[0.5em] mb-12">Building the future of brand with AI</p>
-        <a href="../../index.html#contact" class="text-4xl md:text-6xl font-black hover:text-neon transition-all tracking-tighter glow-neon">
-            LET'S WORK.
-        </a>
+
+
+    <!-- FOOTER -->
+
+    <footer class="border-t border-white/5 bg-black">
+
+        <div class="max-w-7xl mx-auto px-6 md:px-10 py-24">
+
+            <p class="text-gray-600 text-xs font-bold tracking-[.3em] uppercase mb-8">
+                Building the future of brand with AI
+            </p>
+
+            <a href="../../index.html#contact"
+               class="title-font text-4xl md:text-7xl font-black tracking-tight
+                      hover:text-[#ccff00] transition">
+
+                LET'S WORK.
+
+            </a>
+
+        </div>
+
     </footer>
 
 </body>
